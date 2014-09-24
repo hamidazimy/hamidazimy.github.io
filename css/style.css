@@ -293,7 +293,7 @@
 			ul.to_the_left
 			{
 				text-align: left;
-				margin-left: 20%;
+				padding: 8px 10% 0 20%;
 			}
 
 		ol
