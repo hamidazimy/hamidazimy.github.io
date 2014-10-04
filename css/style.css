@@ -111,6 +111,11 @@
 		line-height: 120%;
 	}
 
+	span.backed 
+	{
+		background-color: rgba(16, 16, 16, 0.64);
+	}	
+
 	a
 	{
 		text-decoration: none;
@@ -806,4 +811,9 @@
 			#main > section .uni_img
 			{
 				max-width: 100%;
+				 border: 6px solid #EEE;
+				outline: 1px solid #AAA;
+				-webkit-box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.75);
+				   -moz-box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.75);
+				        box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.75);
 			}

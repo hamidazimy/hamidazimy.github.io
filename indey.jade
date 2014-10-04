@@ -1,0 +1,182 @@
+doctype html
+//
+	  Prologue by HTML5 UP
+	  html5up.net | @n33co
+	  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+html
+	head
+		title Hamid Azimy's Official Website
+		meta(http-equiv='content-type', content='text/html; charset=utf-8')
+		meta(name='description', content='')
+		meta(name='keywords', content='')
+		//[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]
+		script(src='js/jquery.min.js')
+		script(src='js/jquery.modal.min.js')
+		script(src='js/jquery.scrolly.min.js')
+		script(src='js/jquery.scrollzer.min.js')
+		script(src='js/skel.min.js')
+		script(src='js/skel-layers.min.js')
+		script(src='js/init.js')
+		script(src='js/contact-me.js')
+		noscript
+			link(rel='stylesheet', href='css/skel.css')
+			link(rel='stylesheet', href='css/style.css')
+			link(rel='stylesheet', href='css/style-wide.css')
+		//[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]
+		//[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]
+		link(rel='stylesheet', href='css/jquery.modal.css')
+		link(rel='icon', type='image/png', href='images/favicon.png')
+	body
+		// Header 
+		#header.skel-layers-fixed
+			.top
+				// Logo 
+				#logo
+					span.image.avatar48
+						img(src='images/avatar.jpg', alt='')
+					h1#title Hamid Azimy
+					p MS student of CS
+				// Nav 
+				nav#nav
+					//
+						    
+						  Prologue's nav expects links in one of two formats:
+						    
+						  1. Hash link (scrolls to a different section within the page)
+						    
+						     <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+						    
+						  2. Standard link (sends the user to another page/site)
+						    
+						     <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+						    
+					ul
+						li
+							a#top-link.skel-layers-ignoreHref(href='#top')
+								span.icon.fa-home Intro
+						li
+							a#about-link.skel-layers-ignoreHref(href='#about')
+								span.icon.fa-user About Me
+						li
+							a#education-link.skel-layers-ignoreHref(href='#education')
+								span.icon.fa-graduation-cap Education
+						li
+							a#contact-link.skel-layers-ignoreHref(href='#contact')
+								span.icon.fa-envelope Contact
+		// Main 
+		#main
+			// Intro 
+			section#top.one.dark.cover
+				.container
+					header
+						h2.alt
+							span.backed
+								| Hi! I'm 
+								strong Hamid Azimy
+								| ,
+								br
+								| a senior Master of Science student of
+								br
+								| Computer Science (Artificial Intelligence & Robotics).
+						span.backed
+							| @ Social Networks Lab., School of Electrical and Computer Engineering,
+							br
+							| University of Tehran, Iran
+					footer
+						a.button.scrolly(href='#education') Take a tour!
+			// About Me 
+			section#about.three
+				.container
+					header
+						h2 About Me
+					a.image.featured(href='#')
+						img.uni_img(src='images/about_me.jpg', alt='')
+					p
+						|  I was born in Tehran, in the last '
+						a(href='http://en.wikipedia.org/wiki/Yald%C4%81') Yalda
+						| ' of 80's.
+						|   Like other children, I went to school at age 7, but I was a little hothead,
+						|   so I skipped the 3rd grade and went from 2nd grade to 4th grade,
+						|   at my large crowded elementary school. I studied guidance school and high school in
+					embed(src='MyCV.pdf', width='100%', height='375')
+			// Education 
+			section#education.two
+				.container
+					header
+						h2 Education
+					.row
+						.6u
+							i.fa.fa-pencil.fa-border.fa-flip-horizontal
+							&nbsp;
+							strong Master of Science (2012 - Present)
+							br
+							em University of Tehran
+							ul.default.small.to_the_left
+								li
+									| Advisor:
+									strong
+										a(href='http://ece.ut.ac.ir/en/users/Asadpour') Dr. Masoud Asadpour
+									br
+									&nbsp;
+								li
+									| Thesis title:
+									br
+									| Link Prediction in Weighted Networks
+									br
+									&nbsp;
+								li
+									| Expected graduation date:
+									br
+									| July 2015
+						.6u
+							a(href='http://ut.ac.it/en', target='_blank')
+								img.uni_img(alt='', src='images/fanni_.jpg')
+					.row
+						.6u
+							i.fa.fa-pencil.fa-border.fa-flip-horizontal
+							strong Bachelor of Science (2007 - 2012)
+							br
+							em Iran University of Science and Technology
+							ul.default.small.to_the_left
+								li
+									| Advisor:
+									strong
+										a(href='http://www.iust.ac.ir/find.php?item=14.720.544.en') Dr. Behrooz Minaei
+								br
+								li
+									| Thesis title:
+									br
+									| Distributed AI in Video Games
+						.6u
+							a(hrep='http://www.iust.ac.ir/home_en.php')
+								img.uni_img(alt='', src='images/iust_.jpg')
+			// Contact 
+			section#contact.four
+				.container
+					header
+						h2 Contact
+					p
+						| Elementum sem parturient nulla quam placerat viverra
+						| mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
+						| donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
+						| orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.
+					#form
+						.row.half
+							.6u
+								input#name(type='text', name='name', placeholder='Your Name')
+							.6u
+								input#email(type='text', name='email', placeholder='Your Email')
+						.row.half
+							.12u
+								textarea#message(name='message', placeholder='Your Message')
+						.row
+							.12u
+								input#send_mail(type='button', value='Send Message')
+		// Footer 
+		#footer
+			// Copyright 
+			ul.copyright
+				li © Untitled. All rights reserved.
+				li
+					| Design: 
+					a(href='http://html5up.net') HTML5 UP
