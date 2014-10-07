@@ -518,6 +518,32 @@
 					font-size: 1em;
 				}
 
+	/* Misc */
+	.cv_link
+	{
+		border: none !important;
+	}
+		.cv_icon
+		{
+			vertical-align: middle;
+			width: 64px;
+			display: inline-block;
+		}
+		.cv_text
+		{
+			vertical-align: middle;
+			text-decoration: none;
+			font-style: italic;
+			color: inherit;
+			border-bottom: dotted 1px rgba(128, 128, 128, 0.5);
+			-webkit-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+			   -moz-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+			     -o-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+			    -ms-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+			        transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+			outline: 0;
+		}
+
 /*********************************************************************************/
 /* Icons                                                                         */
 /*********************************************************************************/
@@ -808,11 +834,11 @@
 
 			}
 
-			#main > section .uni_img
+			#main > section .framed_img
 			{
 				max-width: 100%;
-				 border: 6px solid #EEE;
 				outline: 1px solid #AAA;
+				 border: 6px solid #EEE;
 				-webkit-box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.75);
 				   -moz-box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.75);
 				        box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.75);
