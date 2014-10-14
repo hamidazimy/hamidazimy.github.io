@@ -135,6 +135,11 @@
 			border-bottom-color: rgba(255,255,255,0);
 		}
 
+		a.no_border
+		{
+			border: none !important;
+		}
+
 	sub
 	{
 		position: relative;
@@ -519,30 +524,62 @@
 				}
 
 	/* Misc */
-	.cv_link
+	.cv_icon
 	{
-		border: none !important;
+		vertical-align: middle;
+		width: 64px;
+		display: inline-block;
 	}
-		.cv_icon
-		{
-			vertical-align: middle;
-			width: 64px;
-			display: inline-block;
-		}
-		.cv_text
-		{
-			vertical-align: middle;
-			text-decoration: none;
-			font-style: italic;
-			color: inherit;
-			border-bottom: dotted 1px rgba(128, 128, 128, 0.5);
-			-webkit-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-			   -moz-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-			     -o-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-			    -ms-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-			        transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
-			outline: 0;
-		}
+	.cv_text
+	{
+		vertical-align: middle;
+		text-decoration: none;
+		font-style: italic;
+		color: inherit;
+		border-bottom: dotted 1px rgba(128, 128, 128, 0.5);
+		-webkit-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+		   -moz-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+		     -o-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+		    -ms-transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+		        transition: color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+		outline: 0;
+	}
+
+	@font-face
+	{
+		font-family: "Friends";
+		src: url("../fonts/friends.ttf");
+	}
+
+	.friends
+	{
+		/*font-family: "Gregor Miller's Friends Font";*/
+		font-family: "Friends";
+		font-size: 75%;
+	}
+
+	.r0
+	{
+		color: #C12;
+		font-size: 60%;
+		vertical-align: top;
+		margin: 2px;
+	}
+
+	.c0
+	{
+		color: #3BF;
+		font-size: 60%;
+		vertical-align: top;
+		margin: 2px;
+	}
+	.y0
+	{
+		color: #DB1;
+		font-size: 60%;
+		vertical-align: top;
+		margin: 2px;
+	}
 
 /*********************************************************************************/
 /* Icons                                                                         */
