@@ -545,6 +545,36 @@
 		outline: 0;
 	}
 
+	.qtip_content
+	{
+		font-family: Tahoma;
+		font-size: 11px;
+		color: #333;
+	}
+
+	.hidden
+	{
+		display: none;
+	}
+
+	#yalda_qtip img
+	{
+		display: block;
+		float: left;
+		width: 150px;
+		border:  1px #AAA solid;
+		outline: 1px #EEE solid;
+	}
+
+	#yalda_qtip .qtip_text
+	{
+		display: block;
+		float: left;
+		width: 200px;
+		margin-left: 10px;
+	}
+
+
 	@font-face
 	{
 		font-family: "Friends";

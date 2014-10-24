@@ -3,8 +3,8 @@
   <head>
     <title>Hamid Azimy's Official Website</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Hamid Azimy's Official Website">
+    <meta name="robots" content="INDEX, FOLLOW">
     <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.modal.min.js"></script>
@@ -14,6 +14,7 @@
     <script src="js/skel-layers.min.js"></script>
     <script src="js/init.js"></script>
     <script src="js/contact-me.js"></script>
+    <script src="http://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.js"></script>
     <noscript>
       <link rel="stylesheet" href="css/skel.css">
       <link rel="stylesheet" href="css/style.css">
@@ -22,7 +23,26 @@
     <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
     <link rel="stylesheet" href="css/jquery.modal.css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.css">
     <link rel="icon" type="image/png" href="images/favicon_transparent.png">
+    <script>
+      $(document).ready(function() {
+       $('#yalda').qtip({
+        content: {
+         text: $('#yalda_qtip'),
+         title: 'Yaldā'
+        },
+        style: 'qtip-bootstrap',
+        show: { delay: 200  },
+        hide: { delay: 2000 }
+       });
+      });
+    </script>
+    <style type="text/css">
+      	.qtip {
+      		max-width: 400px !important;
+      	}
+    </style>
   </head>
   <body>
     <!-- Header -->
@@ -70,7 +90,7 @@
           <header>
             <h2>About Me</h2>
           </header><a href="#" class="image featured"><img src="images/about_me.jpg" alt="" class="framed_img"></a>
-          <p class="align_l">  I was born in Tehran, on the last <a href="http://en.wikipedia.org/wiki/Yald%C4%81">“Yaldā”</a>  of '80s as the first child of my newly married parents.
+          <p class="align_l">  I was born in Tehran, on the last <a id="yalda" href="http://en.wikipedia.org/wiki/Yald%C4%81">“Yaldā”</a>  of '80s as the first child of my newly married parents.
               I was a curious boy and I used to ask a lot of questions and my lovely mom used to answer them
               patiently and in a way that her little son could understand.
               Like other children, I went to school at age 7, but I was a little hasty,
@@ -85,7 +105,10 @@
               Then again, for studying MS, I took another nationwide Konkoor in field of Artificial Intelligence
               and I was ranked 27th among all participants at 2012.
               Since then, I study at University of Tehran in field of Artificial Intelligence and Robotics.
-          </p><a href="docs/Hamid Azimy's CV.pdf" target="_blank" class="no_border"><img src="images/cv_icon.png" alt="CV" class="cv_icon"><span class="cv_text">My complete CV</span></a>
+          </p>
+          <div id="yalda_qtip" class="qtip_content hidden"><img src="images/Persian_Lady_recites_Hafez_Poems_in_Yalda_Night.jpg" alt="">
+            <div class="qtip_text">Yaldā (Persian: "یلدا") is the Persian winter solstice celebration which has been popular since ancient times. Yalda is celebrated on the Northern Hemisphere's longest night of the year, that is, on the eve of the Winter Solstice. Depending on the shift of the calendar, Yalda is celebrated on or around December 20 or 21 each year.</div>
+          </div><a href="docs/Hamid Azimy's CV.pdf" target="_blank" class="no_border"><img src="images/cv_icon.png" alt="CV" class="cv_icon"><span class="cv_text">My complete CV</span></a>
           <!--embed(src='MyCV.pdf', width='100%', height='375')-->
         </div>
       </section>

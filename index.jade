@@ -3,8 +3,8 @@ html
 	head
 		title Hamid Azimy's Official Website
 		meta(http-equiv='content-type', content='text/html; charset=utf-8')
-		meta(name='description', content='')
-		meta(name='keywords', content='')
+		meta(name='description', content="Hamid Azimy's Official Website")
+		meta(name='robots', content='INDEX, FOLLOW')
 		//[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]
 		script(src='js/jquery.min.js')
 		script(src='js/jquery.modal.min.js')
@@ -14,6 +14,7 @@ html
 		script(src='js/skel-layers.min.js')
 		script(src='js/init.js')
 		script(src='js/contact-me.js')
+		script(src='http://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.js')
 		noscript
 			link(rel='stylesheet', href='css/skel.css')
 			link(rel='stylesheet', href='css/style.css')
@@ -21,7 +22,24 @@ html
 		//[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]
 		//[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]
 		link(rel='stylesheet', href='css/jquery.modal.css')
+		link(rel='stylesheet', href='http://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.css')
 		link(rel='icon', type='image/png', href='images/favicon_transparent.png')
+		script.
+			$(document).ready(function() {
+				$('#yalda').qtip({
+					content: {
+						text: $('#yalda_qtip'),
+						title: 'Yaldā'
+					},
+					style: 'qtip-bootstrap',
+					show: { delay: 200  },
+					hide: { delay: 2000 }
+				});
+			});
+		style(type="text/css")
+			|	.qtip {
+			|		max-width: 400px !important;
+			|	}
 	body
 		// Header 
 		#header.skel-layers-fixed
@@ -95,7 +113,7 @@ html
 						img.framed_img(src='images/about_me.jpg', alt='')
 					p.align_l
 						|   I was born in Tehran, on the last 
-						a(href='http://en.wikipedia.org/wiki/Yald%C4%81')“Yaldā”
+						a#yalda(href='http://en.wikipedia.org/wiki/Yald%C4%81')“Yaldā”
 						|   of '80s as the first child of my newly married parents.
 						|   I was a curious boy and I used to ask a lot of questions and my lovely mom used to answer them
 						|   patiently and in a way that her little son could understand.
@@ -111,6 +129,9 @@ html
 						|   Then again, for studying MS, I took another nationwide Konkoor in field of Artificial Intelligence
 						|   and I was ranked 27th among all participants at 2012.
 						|   Since then, I study at University of Tehran in field of Artificial Intelligence and Robotics.
+					#yalda_qtip.qtip_content.hidden
+						img(src="images/Persian_Lady_recites_Hafez_Poems_in_Yalda_Night.jpg", alt="")
+						.qtip_text Yaldā (Persian: "یلدا") is the Persian winter solstice celebration which has been popular since ancient times. Yalda is celebrated on the Northern Hemisphere's longest night of the year, that is, on the eve of the Winter Solstice. Depending on the shift of the calendar, Yalda is celebrated on or around December 20 or 21 each year.
 					//- h4
 					//- 	i.icon.fa-cube &nbsp;
 					//- 	| Interests &amp; Hobbies
