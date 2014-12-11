@@ -1,2 +1,7 @@
 images/.picasa.ini
 images/.picasaoriginals/**
+*.ptd
+*.aux
+*.log
+*.out
+*.gz

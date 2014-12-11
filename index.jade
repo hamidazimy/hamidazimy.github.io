@@ -63,6 +63,9 @@ html
 							a#education-link.skel-layers-ignoreHref(href='#education')
 								span.icon.fa-graduation-cap Education
 						li
+							a#projects-link.skel-layers-ignoreHref(href='#projects')
+								span.icon.fa-file-code-o Projects
+						li
 							a#contact-link.skel-layers-ignoreHref(href='#contact')
 								span.icon.fa-envelope Contact
 			.bottom
@@ -102,10 +105,14 @@ html
 							| &nbsp;Social Networks Lab., School of Electrical and Computer Engineering,&nbsp;
 							br
 							| &nbsp;University of Tehran, Iran&nbsp;
+						br
 					footer
 						a.button.scrolly(href='#about') Take a tour!
+
+					br
+					br
 			// About Me 
-			section#about.three
+			section#about.two
 				.container
 					header
 						h2 About Me
@@ -166,7 +173,7 @@ html
 						span.cv_text My complete CV
 					//embed(src='MyCV.pdf', width='100%', height='375')
 			// Education 
-			section#education.two
+			section#education.three
 				.container
 					header
 						h2 Education
@@ -215,8 +222,32 @@ html
 									br
 									| Distributed AI in Video Games
 						.6u
-							a.no_border(hrep='http://www.iust.ac.ir/home_en.php')
+							a.no_border(href='http://www.iust.ac.ir/home_en.php', target='_blank')
 								img.framed_img(alt='', src='images/iust.jpg')
+			// Projects
+			section#projects.two
+				.container
+					header
+						h2 Projects
+					p
+						| Here is a list of some of my projects which I have done either as course project or as work project.
+					ul.default.small.to_the_left
+						li
+							| Participated in development a Massive Multiplayer Online (MMO) Game, named 
+							a(href='http://www.asmandez.com/') AsmandeZ
+							| &nbsp;[C++, PHP]
+						li Designed and developed a small simple platformer game using MS XNA. [C\#]
+						li Designed and developed a DHCP Server [Java]
+						li Developed a localized virtual social network [ASP.NET, HTML/CSS/JS]
+						li Developed an experimental file compressor application using Adaptive Huffman Coding [C++]
+						li
+							| Developed a robot localization application using Augmented Monte Carlo localization algorithm on 
+							a(href='http://www.e-puck.org/') e-puck
+							| &nbsp;Mobile Robot [Python]
+						li Developed an image segmentation code using Normalized Cut algorithm [MATLAB]
+						li Participated in development of an Web-based Automation Application for a Large Business Corporation [ASP.NET, HTML/CSS/JS]
+						li Participated in development of an Mobile Messaging and VoIP Application for Android in a local development contest named Irancell I.C.M.A [Java, Python]
+						li Developed a byte-code generator compiler for a simple XML-like language as the Compilers course project
 			// Contact 
 			section#contact.four
 				.container
@@ -246,7 +277,9 @@ html
 		#footer
 			// Copyright 
 			ul.copyright
-				li © Untitled. All rights reserved.
+				li
+					span(style="display: inline-block; transform: rotate(180deg)") ©
+					| &nbsp;2014 Hamid Azimy All rights reserved.
 				li
 					| Design: 
 					a(href='http://html5up.net') HTML5 UP
