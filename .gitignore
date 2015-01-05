@@ -4,4 +4,6 @@ images/.picasaoriginals/**
 *.aux
 *.log
 *.out
+*.dvi
 *.gz
+docs/Hamid.tex
