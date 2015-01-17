@@ -9,12 +9,12 @@
 	skel.init({
 		reset: 'full',
 		breakpoints: {
-			'global':	{ range: '*',           href: 'http://hamidazimy.github.io/css/style.css'           , containers: 1400  , grid: { gutters: 40 }, viewport: { scalable: false } },
-			'wide':		{ range: '961-1880',    href: 'http://hamidazimy.github.io/css/style-wide.css'      , containers: 1200  , grid: { gutters: 40 } },
-			'normal':	{ range: '961-1620',    href: 'http://hamidazimy.github.io/css/style-normal.css'    , containers: 960   , grid: { gutters: 40 } },
-			'narrow':	{ range: '961-1320',    href: 'http://hamidazimy.github.io/css/style-narrow.css'    , containers: '100%', grid: { gutters: 20 } },
-			'narrower':	{ range: '-960',        href: 'http://hamidazimy.github.io/css/style-narrower.css'  , containers: '100%', grid: { gutters: 15 } },
-			'mobile':	{ range: '-736',        href: 'http://hamidazimy.github.io/css/style-mobile.css'                        , grid: { collapse: true } }
+			'global':	{ range: '*'          , href: 'http://hamidazimy.github.io/css/style.css'           , containers: 1400  , grid: { gutters: 40 }, viewport: { scalable: false } },
+			'wide'  :	{ range: '961-1880'   , href: 'http://hamidazimy.github.io/css/style-wide.css'      , containers: 1200  , grid: { gutters: 40 } },
+			'normal':	{ range: '961-1620'   , href: 'http://hamidazimy.github.io/css/style-normal.css'    , containers: 960   , grid: { gutters: 40 } },
+			'narrow':	{ range: '961-1320'   , href: 'http://hamidazimy.github.io/css/style-narrow.css'    , containers: '100%', grid: { gutters: 20 } },
+			'narrower':	{ range: '-960'       , href: 'http://hamidazimy.github.io/css/style-narrower.css'  , containers: '100%', grid: { gutters: 15 } },
+			'mobile':	{ range: '-736'       , href: 'http://hamidazimy.github.io/css/style-mobile.css'                        , grid: { collapse: true } }
 		},
 		plugins: {
 			layers: {

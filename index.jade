@@ -1,29 +1,31 @@
 doctype html
 html
 	head
+		- var base = 'http://hamidazimy.github.io/'
 		title Hamid Azimy's Official Website
 		meta(http-equiv='content-type', content='text/html; charset=utf-8')
 		meta(name='description', content="Hamid Azimy's Official Website")
 		meta(name='robots', content='INDEX, FOLLOW')
-		//[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]
-		script(src='js/jquery.min.js')
-		script(src='js/jquery.modal.min.js')
-		script(src='js/jquery.scrolly.min.js')
-		script(src='js/jquery.scrollzer.min.js')
-		script(src='js/skel.min.js')
-		script(src='js/skel-layers.min.js')
-		script(src='js/init.js')
-		script(src='js/contact-me.js')
+		//[if lte IE 8]><script src="http://hamidazimy.github.io/css/ie/html5shiv.js"></script><![endif]
+		script(src=base+'js/jquery.min.js')
+		script(src=base+'js/jquery.modal.min.js')
+		script(src=base+'js/jquery.scrolly.min.js')
+		script(src=base+'js/jquery.scrollzer.min.js')
+		script(src=base+'js/skel.min.js')
+		script(src=base+'js/skel-layers.min.js')
+		script(src=base+'js/init.js')
+		script(src=base+'js/contact-me.js')
 		script(src='http://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.js')
 		noscript
-			link(rel='stylesheet', href='css/skel.css')
-			link(rel='stylesheet', href='css/style.css')
-			link(rel='stylesheet', href='css/style-wide.css')
-		//[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]
-		//[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]
-		link(rel='stylesheet', href='css/jquery.modal.css')
+			link(rel='stylesheet', href=base+'css/skel.css')
+			link(rel='stylesheet', href=base+'css/style.css')
+			link(rel='stylesheet', href=base+'css/style-wide.css')
+		//[if lte IE 9]><link rel="stylesheet" href="http://hamidazimy.github.io/css/ie/v9.css" /><![endif]
+		//[if lte IE 8]><link rel="stylesheet" href="http://hamidazimy.github.io/css/ie/v8.css" /><![endif]
+		link(rel='stylesheet', href=base+'css/jquery.modal.css')
 		link(rel='stylesheet', href='http://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.css')
-		link(rel='icon', type='image/png', href='images/favicon_transparent.png')
+		link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css")
+		link(rel='icon', type='image/png', href=base+'images/favicon_transparent.png')
 		script.
 			$(document).ready(function() {
 				$('#yalda').qtip({
@@ -47,7 +49,7 @@ html
 				// Logo 
 				#logo
 					span.image.avatar48
-						img(src='images/avatar.jpg', alt='')
+						img(src=base+'images/avatar.jpg', alt='')
 					h1#title Hamid Azimy
 					p MS student of CS
 				// Nav 
@@ -117,7 +119,7 @@ html
 					header
 						h2 About Me
 					a.image.featured(href='#')
-						img.framed_img(src='images/about_me.jpg', alt='')
+						img.framed_img(src=base+'images/about_me.jpg', alt='')
 					p.align_l
 						|   I was born in Tehran, on the last 
 						a#yalda(href='http://en.wikipedia.org/wiki/Yald%C4%81')“Yaldā”
@@ -137,7 +139,7 @@ html
 						|   and I was ranked 27th among all participants at 2012.
 						|   Since then, I study at University of Tehran in field of Artificial Intelligence and Robotics.
 					#yalda_qtip.qtip_content.hidden
-						img(src="images/Persian_Lady_recites_Hafez_Poems_in_Yalda_Night.jpg", alt="")
+						img(src=base+"images/Persian_Lady_recites_Hafez_Poems_in_Yalda_Night.jpg", alt="")
 						.qtip_text Yaldā (Persian: "یلدا") is the Persian winter solstice celebration which has been popular since ancient times. Yalda is celebrated on the Northern Hemisphere's longest night of the year, that is, on the eve of the Winter Solstice. Depending on the shift of the calendar, Yalda is celebrated on or around December 20 or 21 each year.
 					//- h4
 					//- 	i.icon.fa-cube &nbsp;
@@ -168,8 +170,8 @@ html
 					//- 		| D
 					//- 		span.c0 •
 					//- 		| S
-					a.no_border(href="docs/Hamid Azimy's CV.pdf", target="_blank")
-						img.cv_icon(src="images/cv_icon.png", alt="CV")
+					a.no_border(href=base+"docs/Hamid Azimy's CV.pdf", target="_blank")
+						img.cv_icon(src=base+"images/cv_icon.png", alt="CV")
 						span.cv_text My complete CV
 					//embed(src='MyCV.pdf', width='100%', height='375')
 			// Education 
@@ -203,7 +205,7 @@ html
 									| July 2015
 						.6u
 							a.no_border(href='http://ut.ac.it/en', target='_blank')
-								img.framed_img(alt='', src='images/ceut.jpg')
+								img.framed_img(alt='', src=base+'images/ceut.jpg')
 					.row
 						.6u
 							i.fa.fa-pencil.fa-border.fa-flip-horizontal
@@ -223,7 +225,7 @@ html
 									| Distributed AI in Video Games
 						.6u
 							a.no_border(href='http://www.iust.ac.ir/home_en.php', target='_blank')
-								img.framed_img(alt='', src='images/iust.jpg')
+								img.framed_img(alt='', src=base+'images/iust.jpg')
 			// Projects
 			section#projects.two
 				.container
