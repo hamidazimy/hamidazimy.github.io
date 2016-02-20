@@ -73,9 +73,10 @@ ul li {
 .page-number {
     position: absolute;
     left: -4px;
-    bottom: 18px;
+    bottom: 20px;
     text-align: center;
     width: 100%;
+    font-size: 20px;
 }
 .title {
     width: 100%;

@@ -10,12 +10,12 @@ $(document).ready(function() {
 });
 
 function insertSidebar() {
-  page_number = 0;
-  total_pages = persianifyNumbers("" + ($(".step").size() - 1));
+  var page_number = 0;
+  var total_pages = "" + ($(".step").size() - 1);
   $(".step").each(function(){
     if (++page_number !== 1) {
       $(this).addClass("have-sidebar").append($(".add-to-every-page").html());
-      $(this).find(".page-number").append("<div class='page-number-container'>صفحه " + persianifyNumbers("" + page_number) + " از " + total_pages +"</div>");
+      $(this).find(".page-number").append("<div class='page-number-container'>" + page_number + " / " + total_pages +"</div>");
     }
   });
 }
