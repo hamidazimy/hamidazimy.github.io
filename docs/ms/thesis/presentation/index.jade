@@ -1,0 +1,70 @@
+// output: index.html
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title="Link Prediction in Weighted Networks"
+    link(href="favicon.png", rel="icon", type="image/png")
+    
+    // Styles 
+    // link(rel="stylesheet", type="text/css", href="css/main.css")
+    // link(href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic", rel="stylesheet")
+    // link(href="http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css", rel="stylesheet")
+    link(href='https://fonts.googleapis.com/css?family=Droid+Serif', rel='stylesheet', type='text/css')
+    link(rel="stylesheet", type="text/css", href="css/impress-demo.css")
+    link(rel="stylesheet", type="text/css", href="css/main.css")
+    
+    // Scripts
+    script(type="text/x-mathjax-config").
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}})
+    script(src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")
+    script(src="js/jquery.min.js")
+    script(src="js/main.js")
+
+  body.impress-not-supported
+    .fallback-message
+      p
+        | Your browser 
+        b doesn't support the features required
+        |  by impress.js, so you are presented with a simplified version of this presentation.
+      p
+        | For the best experience please use the latest 
+        b Chrome
+        |  or 
+        b Firefox
+        |  browser.
+    .add-to-every-page
+      .sidebar
+        .logo
+          img(src="images/ut.png", alt="") 
+        ul.navigation
+          li Introduction
+          li Literature Review
+          li Proposed Method
+          li Experiments
+          li Results and Analysis
+          li Conclusion
+          li
+        //- .page-number
+    #impress
+      .step.slide(data-x="0",    data-y="0"   , data-rotate-x="-30")
+        h1 Link Prediction in Weighted Networks
+      .step.slide.sec1(data-x="1400", data-y="0"   , data-rotate-x="-30")
+      .step.slide.sec2(data-x="2800", data-y="0"   , data-rotate-x="-30")
+      .step.slide.sec3(data-x="4200", data-y="0"   , data-rotate-x="-30")
+      .step.slide.sec4(data-x="5600", data-y="0"   , data-rotate-x="-30")
+      .step.slide.sec5(data-x="5600", data-y="750" , data-rotate-x="-30")
+      .step.slide.sec6(data-x="4200", data-y="750" , data-rotate-x="-30")
+      .step.slide(data-x="2800", data-y="750" , data-rotate-x="-30")
+      .step.slide(data-x="1400", data-y="750" , data-rotate-x="-30")
+      .step.slide(data-x="0",    data-y="750" , data-rotate-x="-30")
+      .step.slide(data-x="0",    data-y="1500", data-rotate-x="-30")
+      .step.slide(data-x="1400", data-y="1500", data-rotate-x="-30")
+      .step.slide(data-x="2800", data-y="1500", data-rotate-x="-30")
+      .step.slide(data-x="4200", data-y="1500", data-rotate-x="-30")
+      .step.slide(data-x="5600", data-y="1500", data-rotate-x="-30")
+      #overview.step(data-x="2800", data-y="750", data-scale="5")
+    script(src="js/impress.js")
+    script.
+      impress().init();
