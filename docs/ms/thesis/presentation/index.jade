@@ -50,11 +50,49 @@ html(lang="en")
       .step.slide(data-x="0",    data-y="0"   , data-rotate-x="+30")
         h1 Link Prediction in Weighted Networks
       .step.slide(data-x="1400", data-y="0"   , data-rotate-x="+30").sec1
+          p Analysing Complex Networks and Social Networks has become a popular research interest both in computer science and physical science communities nowadays
+          br
+          | Link Prediction is the problem of predicting
+          | links between network’s individuals, which is either not exist
+          p in a dynamic network or not observed in a partially observed network.
+          br
+          | For predicting a potential link, we should somehow estimate
+          | the ‘similarity’ between nodes. The more similar the nodes are,
+          p the more chance they may have a link.
+          br
+          | For example, one can say that if two nodes have more common neighbours, they are more similar.
       .step.slide(data-x="2800", data-y="0"   , data-rotate-x="+30").sec2
+        p DK!
       .step.slide(data-x="4200", data-y="0"   , data-rotate-x="+30").sec3
+        p A. Community Detection
+        | we chose Infomap to use as out community detection method based on the work of Lancichinetti and Fortunato
+        | Infomap performs really well on the LFR networks and it is one of the best community detection algorithm overall and
+        p tries to find the best cluster structure of a network by solving this problem
+        br
+        | B. Link Prediction Within Communities
+        | ???
       .step.slide(data-x="5600", data-y="0"   , data-rotate-x="+30").sec4
+        p we use LFR networks as our empirical data.
+        | LFR networks was first introduced by Lancichinetti, Fortunato
+        | and Radicchi at 2008 as a benchmark for community detection
+        p algorithms.
+        br
+        |LFR networks are synthesis networks that one
+        | can make with an arbitrary set of parameters such as number of
+        | nodes, average degree of nodes, maximum size of community,
+        | etc. Two most important parameters of LFR networks for our work are μ t and μ w .
       .step.slide(data-x="5600", data-y="750" , data-z="200" data-rotate-x="0").sec5
+        p جدول و نمودار
       .step.slide(data-x="4200", data-y="750" , data-z="200" data-rotate-x="0").sec6
+        p we intended to use link weights as well as
+        | community detection as methods for increasing performance
+        | of link prediction. We proposed four methods depending on
+        | whether or not using link weights in two step of computing
+        | similarity measures and community detection. Each of these
+        | four methods can work with every similarity index we studied,
+        | such as CN, AA, etc. Then we perform these methods on
+        | synthesis LFR network with different parameters, μ t and μ w ,
+        | to study the effect of using link weights and community detection on different parameter setups.
       .step.slide(data-x="2800", data-y="750" , data-z="200" data-rotate-x="0")
       .step.slide(data-x="1400", data-y="750" , data-z="200" data-rotate-x="0")
       .step.slide(data-x="0",    data-y="750" , data-z="200" data-rotate-x="0")
