@@ -47,30 +47,50 @@ html(lang="en")
           li
         .page-number
     #impress
-      .step.slide(data-x="0",    data-y="0"   , data-rotate-x="+30")
-        h1 Link Prediction in Weighted Networks
+      #first-page.step.slide(data-x="0",    data-y="0"   , data-rotate-x="+30")
+        .container
+          .row
+            .col-2
+              img.fill(src="images/fanni.png", alt="")
+            .col-2.off-8
+              img.fill(src="images/ut.png", alt="")
+          .row
+            h1.col-12 Link Prediction in Weighted Networks
+            h3.col-10.off-2.pad-3.navy Hamid Azimy
+            h4.col-10.off-2.pad-1.navy hamid.azimy@gmail.com
+            h5.col-10.off-2.pad-1.navy Electrical and Computer Engineering, University of Tehran
       .step.slide(data-x="1400", data-y="0"   , data-rotate-x="+30").sec1
-        p Analysing Complex Networks and Social Networks has become a popular research interest both in computer science and physical science communities nowadays
-          br
-          | Link Prediction is the problem of predicting
-          | links between network’s individuals, which is either not exist
-        p in a dynamic network or not observed in a partially observed network.
-          br
-          | For predicting a potential link, we should somehow estimate
-          | the ‘similarity’ between nodes. The more similar the nodes are,
-        p the more chance they may have a link.
-          br
-          | For example, one can say that if two nodes have more common neighbours, they are more similar.
+        p Analysing Complex NetworFor example, one can say that if two nodes have more common neighbours, they are more similar.
       .step.slide(data-x="2800", data-y="0"   , data-rotate-x="+30").sec2
-        p DK!
+        .container
+          .row
+            .col-12.title Link Prediction Problem
+          .row
+            .col-12
+              p.
+                Suppose we have a complex network (social network, etc),
+                can we predict link (between network's individuals)
+                which is either not exist in a dynamic network
+                or not observed in a partially observed network?
+            .col-12.vspace
+            .col-12.vspace
+            .col-3.off-2
+              img.fill(src="images/time-t.jpg", alt="")
+            .col-3.off-2.anim.animated1
+              img.fill(src="images/time-t'.jpg", alt="")
       .step.slide(data-x="4200", data-y="0"   , data-rotate-x="+30").sec3
-        p A. Community Detection
-          | we chose Infomap to use as out community detection method based on the work of Lancichinetti and Fortunato
-          | Infomap performs really well on the LFR networks and it is one of the best community detection algorithm overall and
-        p tries to find the best cluster structure of a network by solving this problem
-          br
-          | B. Link Prediction Within Communities
-          | ???
+        .container
+          .row
+            .col-12.title Application
+          .row
+            .col-7
+              ul.list(style="font-size: 90%;")
+                li Friend suggestion in social networks (Twitter, LinkedIn, etc)
+                li Shopping suggestion in online shops
+                li Reducing experiment cost for detecting interaction between genes or proteins by avoiding blind search and concentrating on most likle relation
+                li etc...
+            .col-5
+              img.fill(src="images/twitter-suggestion.jpg", alt="")
       .step.slide(data-x="5600", data-y="0"   , data-rotate-x="+30").sec4
         p we use LFR networks as our empirical data.
           | LFR networks was first introduced by Lancichinetti, Fortunato
