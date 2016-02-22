@@ -710,3 +710,7 @@ ul li {
 .to-red.anim-x {
     color: rgb(200, 63, 63);
 }
+
+.ty {
+    margin-top: 15rem;
+}
