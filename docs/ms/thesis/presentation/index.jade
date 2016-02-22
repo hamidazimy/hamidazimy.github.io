@@ -91,28 +91,57 @@ html(lang="en")
                 li etc...
             .col-5
               img.fill(src="images/twitter-suggestion.jpg", alt="")
-      .step.slide(data-x="5600", data-y="0"   , data-rotate-x="+30").sec4
-        p we use LFR networks as our empirical data.
-          | LFR networks was first introduced by Lancichinetti, Fortunato
-          | and Radicchi at 2008 as a benchmark for community detection algorithms.
-          br
-          | LFR networks are synthesis networks that one
-          | can make with an arbitrary set of parameters such as number of
-          | nodes, average degree of nodes, maximum size of community,
-          | etc. Two most important parameters of LFR networks for our work are μ t and μ w .
-      .step.slide(data-x="5600", data-y="750" , data-z="200" data-rotate-x="0").sec5
-        p جدول و نمودار
-      .step.slide(data-x="4200", data-y="750" , data-z="200" data-rotate-x="0").sec6
-        p we intended to use link weights as well as
-          | community detection as methods for increasing performance
-          | of link prediction. We proposed four methods depending on
-          | whether or not using link weights in two step of computing
-          | similarity measures and community detection. Each of these
-          | four methods can work with every similarity index we studied,
-          | such as CN, AA, etc. Then we perform these methods on
-          | synthesis LFR network with different parameters, μ t and μ w ,
-          | to study the effect of using link weights and community detection on different parameter setups.
-      .step.slide(data-x="2800", data-y="750" , data-z="200" data-rotate-x="0").sec3
+      .step.slide(data-x="5600", data-y="0"   , data-rotate-x="+30").sec2
+        .container
+          .row
+            .col-12.title Previous Works
+          .row
+            .col-12
+              ul.list
+                li Node-based methods
+                li.anim.to-red Link-based methods
+                li Maximum Likelihood methods
+                li Probabilistic models
+                li Methods based on Social Teory
+                li Learning-based methods
+      .step.slide(data-x="5600", data-y="750" , data-z="200" data-rotate-x="10").sec2
+        .container
+          .row
+            .col-12.title Previous Works
+          .row
+            .col-12
+              ul.list
+                li.anim.to-red Local similarity indices
+                li Global similarity indices
+                li Random walk based indices
+      .step.slide(data-x="4200", data-y="750" , data-z="200" data-rotate-x="10").sec2
+        .container
+          .row
+            .col-12.title Previous Works
+          .row
+            //- .col-12
+            //-   ul.list
+            //-     li.h4 Common neighbours:
+            //-       span.h6 $$ CN(x,y) = \sum_{z\in\Gamma(x)\cup\Gamma(y)}w(x,z)+w(z,y) $$
+            //-     li.h4 Adamic/Adar:
+            //-       span.h6 $$ AA(x,y) = \sum_{z\in\Gamma(x)\cup\Gamma(y)}\frac{w(x,z)+w(z,y)}{log(s(z))} $$
+            //-     li.h4 Resourse Allocation:
+            //-       span.h6 $$ RA(x,y) = \sum_{z\in\Gamma(x)\cup\Gamma(y)}\frac{w(x,z)+w(z,y)}{s(z)} $$
+            //-     li.h4 Preferential Attachment:
+            //-       span.h6 $$ PA(x,y) = s(x) \times s(y) $$
+            
+            .col-6 Common neighbours:
+            .col-6.h5 $$ CN(x,y) = \sum_{z\in\Gamma(x)\cup\Gamma(y)}w(x,z)+w(z,y) $$
+            .col-12.vspace
+            .col-6 Adamic/Adar:
+            .col-6.h5 $$ AA(x,y) = \sum_{z\in\Gamma(x)\cup\Gamma(y)}\frac{w(x,z)+w(z,y)}{log(s(z))} $$
+            .col-12.vspace
+            .col-6 Resourse Allocation:
+            .col-6.h5 $$ RA(x,y) = \sum_{z\in\Gamma(x)\cup\Gamma(y)}\frac{w(x,z)+w(z,y)}{s(z)} $$
+            .col-12.vspace
+            .col-6 Preferential Attachment:
+            .col-6.h5 $$ PA(x,y) = s(x) \times s(y) $$
+      .step.slide(data-x="2800", data-y="750" , data-z="200" data-rotate-x="10").sec3
         .container
           .row
             .col-12.title Goals and Achivements
@@ -126,7 +155,7 @@ html(lang="en")
                   ul.list.pad-1
                     li Proposing 4 methods using link weights and community informations
                     li Analysing the performance of each of these methods in parametric space of LFR networks
-      .step.slide(data-x="1400", data-y="750" , data-z="200" data-rotate-x="0").sec3
+      .step.slide(data-x="1400", data-y="750" , data-z="200" data-rotate-x="10").sec3
         .container
           .row
             .col-12.title Proposed Method
@@ -141,7 +170,7 @@ html(lang="en")
                 li Solution:
                   ul.list.pad-1
                     li We predict link inside communities.
-      .step.slide(data-x="0",    data-y="750" , data-z="200" data-rotate-x="0").sec3
+      .step.slide(data-x="0",    data-y="750" , data-z="200" data-rotate-x="10").sec3
         .container
           .row
             .col-12.title Proposed Method
@@ -149,7 +178,7 @@ html(lang="en")
             .col-10.off-0.method-step Calculating similarity measures
             .col-10.off-1.method-step Perform community detection algorithm
             .col-10.off-2.method-step Predict links inside communities
-      .step.slide(data-x="0",    data-y="1500", data-rotate-x="-30").sec3
+      .step.slide(data-x="0",    data-y="1500", data-z="200", data-rotate-x="-10").sec3
         .container
           .row
             .col-12.title Method Formulation
@@ -162,31 +191,76 @@ html(lang="en")
                 1 & \text{if } comm(x) = comm(y) ,\\
                 0 & \text{if } otherwise
               \end{array} \right.$$
-      .step.slide(data-x="1400", data-y="1500", data-rotate-x="-30")
+      .step.slide(data-x="1400", data-y="1500", data-z="200", data-rotate-x="-10").sec4
+        .container
+          .row
+            .col-12.title LFR Networks
+          .row
+            .col-12
+              ul.list
+                li Synthesis parametric networks introduced by Lancichinetti, Fortunato and Radicchi at 2008
+            .col-7
+              ul.list
+                li Two main paramters:
+                  ul.list.pad-1
+                    li $ \mu_t $ : mixing parameter for the topology
+                    li $ \mu_w $ : mixing parameter for the weight
+            .col-5
+              img.fill(src="images/mu.png", alt="")
+      .step.slide(data-x="2800", data-y="1500", data-z="200", data-rotate-x="-10").sec4
+        .container
+          .row
+            .col-12.title Results of P@n
+          .row
+            .col-8.off-2
+              img.fill(src="images/p@n.png", alt="")
+      .step.slide(data-x="4200", data-y="1500", data-z="200", data-rotate-x="-10").sec4
+        .container
+          .row
+            .col-12.title Results of Average Precision
+          .row
+            .col-8.off-2
+              img.fill(src="images/cn.png", alt="")
+      .step.slide(data-x="5600", data-y="1500", data-z="200", data-rotate-x="-10").sec4
+        .container
+          .row
+            .col-12.title Results of Average Precision
+          .row
+            .col-8.off-2
+              img.fill(src="images/aa.png", alt="")
+      .step.slide(data-x="5600", data-y="2250", data-rotate-x="-30").sec4
+        .container
+          .row
+            .col-12.title Results of Average Precision
+          .row
+            .col-8.off-2
+              img.fill(src="images/ra1.png", alt="")
+      .step.slide(data-x="4200", data-y="2250", data-rotate-x="-30").sec4
+        .container
+          .row
+            .col-12.title Results of Average Precision
+          .row
+            .col-8.off-2
+              img.fill(src="images/pa.png", alt="")
+      .step.slide(data-x="2800", data-y="2250", data-rotate-x="-30").sec4
         .container
           .row
             .col-12.title
           .row
             .col
-      .step.slide(data-x="2800", data-y="1500", data-rotate-x="-30")
+      .step.slide(data-x="1400", data-y="2250", data-rotate-x="-30").sec5
         .container
           .row
             .col-12.title
           .row
             .col
-      .step.slide(data-x="4200", data-y="1500", data-rotate-x="-30")
+      .step.slide(data-x="0"   , data-y="2250", data-rotate-x="-30").sec5
         .container
           .row
             .col-12.title
           .row
             .col
-      .step.slide(data-x="5600", data-y="1500", data-rotate-x="-30")
-        .container
-          .row
-            .col-12.title
-          .row
-            .col
-      #overview.step(data-x="2800", data-y="750", data-scale="5")
+      #overview.step(data-x="2800", data-y="1110", data-scale="5")
     script(src="js/impress.js")
     script.
       impress().init();

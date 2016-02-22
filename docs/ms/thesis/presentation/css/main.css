@@ -702,3 +702,11 @@ ul li {
 .animated1.anim-x {
     opacity: 1;
 }
+
+.to-red {
+    transition: all 2s;
+}
+
+.to-red.anim-x {
+    color: rgb(200, 63, 63);
+}
