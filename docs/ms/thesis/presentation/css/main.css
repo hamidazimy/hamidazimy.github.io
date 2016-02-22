@@ -373,7 +373,7 @@ a:focus {
 
 [class*='MathJax'] {
     direction: ltr;
-    font-family: "DejaVu Serif";
+    font-family: "Droid Serif";
 }
 
 .slide * {
@@ -534,22 +534,22 @@ a:focus {
     padding-top: 4rem;
 }
 
-h1 {
+h1, .h1 {
     font-size: 3.0rem;
 }
-h2 {
+h2, .h2 {
     font-size: 2.6rem;
 }
-h3 {
+h3, .h3 {
     font-size: 2.2rem;
 }
-h4 {
+h4, .h4 {
     font-size: 1.8rem;
 }
-h5 {
+h5, .h5 {
     font-size: 1.4rem;
 }
-h6 {
+h6, .h6 {
     font-size: 1.0rem;
 }
 
@@ -659,7 +659,14 @@ ul li {
 }
 .list {
     list-style: disc;
-    margin-left: 1rem
+    margin-left: 2rem
+}
+.list .list {
+    list-style: circle;
+    font-size: 90%;
+}
+.list .list .list {
+
 }
 .list li {
     margin-bottom: 2rem
@@ -670,6 +677,22 @@ ul li {
 .fill {
     width: 100%;
     height: auto;
+}
+
+.method-step {
+    border: 0.2rem solid #28B;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    padding: 3rem;
+}
+
+.method-step:not(:last-child)::after {
+    content: "";
+    color: #28B;
+    font-size: 5rem;
+    position: absolute;
+    right: 0;
+    bottom: -4rem;
 }
 
 .animated1 {

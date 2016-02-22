@@ -61,7 +61,7 @@ html(lang="en")
             h5.col-10.off-2.pad-1.navy Electrical and Computer Engineering, University of Tehran
       .step.slide(data-x="1400", data-y="0"   , data-rotate-x="+30").sec1
         p Analysing Complex NetworFor example, one can say that if two nodes have more common neighbours, they are more similar.
-      .step.slide(data-x="2800", data-y="0"   , data-rotate-x="+30").sec2
+      .step.slide(data-x="2800", data-y="0"   , data-rotate-x="+30").sec1
         .container
           .row
             .col-12.title Link Prediction Problem
@@ -78,7 +78,7 @@ html(lang="en")
               img.fill(src="images/time-t.jpg", alt="")
             .col-3.off-2.anim.animated1
               img.fill(src="images/time-t'.jpg", alt="")
-      .step.slide(data-x="4200", data-y="0"   , data-rotate-x="+30").sec3
+      .step.slide(data-x="4200", data-y="0"   , data-rotate-x="+30").sec1
         .container
           .row
             .col-12.title Application
@@ -112,14 +112,80 @@ html(lang="en")
           | such as CN, AA, etc. Then we perform these methods on
           | synthesis LFR network with different parameters, μ t and μ w ,
           | to study the effect of using link weights and community detection on different parameter setups.
-      .step.slide(data-x="2800", data-y="750" , data-z="200" data-rotate-x="0")
-      .step.slide(data-x="1400", data-y="750" , data-z="200" data-rotate-x="0")
-      .step.slide(data-x="0",    data-y="750" , data-z="200" data-rotate-x="0")
-      .step.slide(data-x="0",    data-y="1500", data-rotate-x="-30")
+      .step.slide(data-x="2800", data-y="750" , data-z="200" data-rotate-x="0").sec3
+        .container
+          .row
+            .col-12.title Goals and Achivements
+          .row
+            .col-12
+              ul.list
+                li The goal:
+                  ul.list.pad-1
+                    li Proposing a method for link prediction in weighted networks using community informations.
+                li.pad-1 Achivements:
+                  ul.list.pad-1
+                    li Proposing 4 methods using link weights and community informations
+                    li Analysing the performance of each of these methods in parametric space of LFR networks
+      .step.slide(data-x="1400", data-y="750" , data-z="200" data-rotate-x="0").sec3
+        .container
+          .row
+            .col-12.title Proposed Method
+          .row
+            .col-4
+              ul.list
+                li Main idea:
+            .col-8.off-2
+              img.fill(src="images/main-idea.png", alt="")
+            .col-12
+              ul.list.pad-1
+                li Solution:
+                  ul.list.pad-1
+                    li We predict link inside communities.
+      .step.slide(data-x="0",    data-y="750" , data-z="200" data-rotate-x="0").sec3
+        .container
+          .row
+            .col-12.title Proposed Method
+          .row
+            .col-10.off-0.method-step Calculating similarity measures
+            .col-10.off-1.method-step Perform community detection algorithm
+            .col-10.off-2.method-step Predict links inside communities
+      .step.slide(data-x="0",    data-y="1500", data-rotate-x="-30").sec3
+        .container
+          .row
+            .col-12.title Method Formulation
+          .row
+            .col-12.pad-2.h2.
+              $$ SM'(x,y) = SM(x,y) \times CO(x,y) $$
+            .col-12.pad-2.h3.
+              $$  CO(x,y)=  \left\{
+              \begin{array}{rl}
+                1 & \text{if } comm(x) = comm(y) ,\\
+                0 & \text{if } otherwise
+              \end{array} \right.$$
       .step.slide(data-x="1400", data-y="1500", data-rotate-x="-30")
+        .container
+          .row
+            .col-12.title
+          .row
+            .col
       .step.slide(data-x="2800", data-y="1500", data-rotate-x="-30")
+        .container
+          .row
+            .col-12.title
+          .row
+            .col
       .step.slide(data-x="4200", data-y="1500", data-rotate-x="-30")
+        .container
+          .row
+            .col-12.title
+          .row
+            .col
       .step.slide(data-x="5600", data-y="1500", data-rotate-x="-30")
+        .container
+          .row
+            .col-12.title
+          .row
+            .col
       #overview.step(data-x="2800", data-y="750", data-scale="5")
     script(src="js/impress.js")
     script.
