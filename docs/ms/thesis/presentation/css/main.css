@@ -518,6 +518,10 @@ a:focus {
     margin-left: 100%;
 }
 
+.pad-half {
+    padding-top: 0.5rem;
+}
+
 .pad-1 {
     padding-top: 1rem;
 }
@@ -670,6 +674,9 @@ ul li {
 }
 .list li {
     margin-bottom: 2rem
+}
+.list.compact li {
+    margin-bottom: 0.3rem;
 }
 .vspace {
     height: 1rem;
