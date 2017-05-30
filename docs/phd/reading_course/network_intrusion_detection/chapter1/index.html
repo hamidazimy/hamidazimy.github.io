@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Intrusion Detection Book - Chapter 1</title>
+    <link rel="icon" type="image/png" href="cic.png">
+    <!-- Styles -->
+    <!-- link(rel="stylesheet", type="text/css", href="css/main.css")-->
+    <!-- link(href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic", rel="stylesheet")-->
+    <!-- link(href="http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css", rel="stylesheet")-->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body class="impress-not-supported">
+    <div class="fallback-message">
+      <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+      <p>For the best experience please use the latest <b>Chrome</b> or <b>Firefox</b> browser.</p>
+    </div>
+    <div class="add-to-every-page">
+      <div class="sidebar">
+        <div class="logo"><img src="images/cic_logo_large.png" alt=""></div>
+        <ul class="navigation">
+          <li>Internet model</li>
+          <li>Packaging data</li>
+          <li>Addresses</li>
+          <li>Services & Ports</li>
+          <li>DNS</li>
+          <li>Routing</li>
+          <li></li>
+        </ul>
+        <div class="page-number"></div>
+      </div>
+    </div>
+    <div id="impress">
+      <div id="first-page" data-x="0" data-y="0" data-rotate-x="+30" class="step slide">
+        <div class="container">
+          <div class="row">
+            <h1 class="outlined col-12">Network Intrusion Detection</h1>
+            <h2 class="outlined col-12">Chapter 1: IP Concepts</h2>
+            <h3 class="outlined col-10 off-2 pad-3">Hamid Azimy</h3>
+            <h4 class="outlined col-10 off-2 pad-1">hamid.azimy@gmail.com</h4>
+            <h5 class="outlined col-10 off-2 pad-1">Canadian Inistitute for Cybersecurity</h5>
+          </div>
+        </div>
+      </div>
+      <div data-x="1400" data-y="0" data-rotate-x="+30" class="step slide">
+        <div class="container">
+          <div class="row title">
+            <div class="col-12">Outline</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <ul class="list">
+                <li>The TCP/IP Internet model</li>
+                <li>Packaging of data on the Internet</li>
+                <li>Physical and logical addresses</li>
+                <li>TCP/IP services and ports</li>
+                <li>Domain Name System</li>
+                <li>Routing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-x="2800" data-y="0" data-rotate-x="+30" class="step slide sec1">
+        <div class="container">
+          <div class="row title">
+            <div class="col-12">Network Layers</div>
+          </div>
+          <div class="row">
+            <div class="col-10 off-1 pad-2"><img id="net_layers" src="images/network_layers.jpg" alt="" style="filter: opacity(0.8)" class="fill"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="4200" data-y="0" data-rotate-x="+30" class="step slide sec2">
+        <div class="container">
+          <div class="row title">
+            <div class="col-12">Bits, Bytes, and Packets</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <ul class="list">
+                <li>Bit: 0 or 1</li>
+                <li>Bytes: 8 bits (e.g. 00101110)<br>&emsp; It can contain ann ASCII caracter;<br>&emsp; and also positive integers no greater than 255.</li>
+                <li>Packets: Multiple bytes grouped together for shipping across the network by packaging them.</li>
+              </ul>
+            </div>
+            <div class="col-4 off-4"><img src="images/packet.jpg" alt="" style="filter: opacity(0.8)"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="5600" data-y="0" data-rotate-x="+30" class="step slide sec2">
+        <div class="container">
+          <div class="row title">
+            <div class="col-12">Encapsulation</div>
+          </div>
+          <div class="row">
+            <div class="col-12">Each layer talk to its peer on other computer's stack. To do so, each leyer adds its own header (a.k.a. payload) to the data. One layer's header is another layer's data.</div>
+            <div class="col-8 off-2 pad-3"><img src="images/headers.jpg" alt="" class="fill"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="5600" data-y="750" data-z="200" data-rotate-x="10" class="step slide sec2">
+        <div class="container">
+          <div class="row title">
+            <div class="col-12">Interpretation of the Layers</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <ul class="list">
+                <li>Buttom line:<br>&emsp;&emsp;Eventually we will have a bunch of 0s &amp; 1s</li>
+                <li class="anim fade-in">How do we know how to interpret them?</li>
+                <li class="anim fade-in">Each protocol has its own layouts and formats.</li>
+              </ul>
+            </div>
+            <div class="col-7 off-2 anim fade-in"><img src="images/ip_header.jpg" alt="" style="filter: opacity(0.8)" class="fill"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="4200" data-y="750" data-z="200" data-rotate-x="10" class="step slide sec3">
+        <div class="container">
+          <div class="row title">
+            <div class="col-12 small">Physical Addresses, MAC Addresses</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <ul class="list">
+                <li>From prespective of IP, they do not exist!</li>
+                <li>They are how the Ethernet card interface with the network.</li>
+                <li>On the contrary, the Ethernet card knows nothing about IP &amp; IP Addresses.</li>
+                <li>So, a process to facilitate the correspondence is required.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-x="2800" data-y="750" data-z="200" data-rotate-x="10" class="step slide sec3">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="1400" data-y="750" data-z="200" data-rotate-x="10" class="step slide sec3">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="0" data-y="750" data-z="200" data-rotate-x="10" class="step slide sec3">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="0" data-y="1500" data-z="200" data-rotate-x="-10" class="step slide sec3">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="1400" data-y="1500" data-z="200" data-rotate-x="-10" class="step slide sec4">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="2800" data-y="1500" data-z="200" data-rotate-x="-10" class="step slide sec5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="4200" data-y="1500" data-z="200" data-rotate-x="-10" class="step slide sec5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="5600" data-y="1500" data-z="200" data-rotate-x="-10" class="step slide sec5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="5600" data-y="2250" data-rotate-x="-30" class="step slide sec5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="4200" data-y="2250" data-rotate-x="-30" class="step slide sec5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="2800" data-y="2250" data-rotate-x="-30" class="step slide sec6">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="1400" data-y="2250" data-rotate-x="-30" class="step slide sec6">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="0" data-y="2250" data-rotate-x="-30" class="step slide sec6">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title ty">Thank you!</div>
+          </div>
+        </div>
+      </div>
+      <div id="overview" data-x="2800" data-y="1110" data-scale="5" class="step"></div>
+    </div>
+    <script src="js/impress.js"></script>
+    <script>impress().init();</script>
+  </body>
+</html>

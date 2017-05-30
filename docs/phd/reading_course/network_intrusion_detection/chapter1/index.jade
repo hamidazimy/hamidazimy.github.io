@@ -1,0 +1,202 @@
+// output: index.html
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title="Network Intrusion Detection Book - Chapter 1"
+    link(rel="icon", type="image/png", href="cic.png")
+    // Styles 
+    // link(rel="stylesheet", type="text/css", href="css/main.css")
+    // link(href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic", rel="stylesheet")
+    // link(href="http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css", rel="stylesheet")
+    link(href='https://fonts.googleapis.com/css?family=Droid+Serif', rel='stylesheet', type='text/css')
+    link(rel="stylesheet", type="text/css", href="css/main.css")
+    script(src="js/jquery.min.js")
+    script(src="js/main.js")
+
+  body.impress-not-supported
+    .fallback-message
+      p
+        | Your browser 
+        b doesn't support the features required
+        |  by impress.js, so you are presented with a simplified version of this presentation.
+      p
+        | For the best experience please use the latest 
+        b Chrome
+        |  or 
+        b Firefox
+        |  browser.
+    .add-to-every-page
+      .sidebar
+        .logo
+          img(src="images/cic_logo_large.png", alt="") 
+        ul.navigation
+          li Internet model
+          li Packaging data
+          li Addresses
+          li Services & Ports
+          li DNS
+          li Routing
+          li
+        .page-number
+    #impress
+      #first-page.step.slide(data-x="0",    data-y="0"   , data-rotate-x="+30")
+        .container
+          .row
+            h1.outlined.col-12 Network Intrusion Detection
+            h2.outlined.col-12 Chapter 1: IP Concepts
+            h3.outlined.col-10.off-2.pad-3 Hamid Azimy
+            h4.outlined.col-10.off-2.pad-1 hamid.azimy@gmail.com
+            h5.outlined.col-10.off-2.pad-1 Canadian Inistitute for Cybersecurity
+      .step.slide(data-x="1400", data-y="0"   , data-rotate-x="+30")
+        .container
+          .row.title
+            .col-12 Outline
+          .row
+            .col-12
+              ul.list
+                li The TCP/IP Internet model
+                li Packaging of data on the Internet
+                li Physical and logical addresses
+                li TCP/IP services and ports
+                li Domain Name System
+                li Routing
+      .step.slide(data-x="2800", data-y="0"   , data-rotate-x="+30").sec1
+        .container
+          .row.title
+            .col-12 Network Layers
+          .row
+            .col-10.off-1.pad-2
+              img#net_layers.fill(src="images/network_layers.jpg", alt="", style="filter: opacity(0.8)")
+      .step.slide(data-x="4200", data-y="0"   , data-rotate-x="+30").sec2
+        .container
+          .row.title
+            .col-12 Bits, Bytes, and Packets
+          .row
+            .col-12
+              ul.list
+                li Bit: 0 or 1
+                li Bytes: 8 bits (e.g. 00101110)
+                  br 
+                  | &emsp; It can contain ann ASCII caracter;
+                  br
+                  | &emsp; and also positive integers no greater than 255.
+                li Packets: Multiple bytes grouped together for shipping across the network by packaging them.
+            .col-4.off-4
+              img(src="images/packet.jpg", alt="", style="filter: opacity(0.8)")
+      .step.slide(data-x="5600", data-y="0"   , data-rotate-x="+30").sec2
+        .container
+          .row.title
+            .col-12 Encapsulation
+          .row
+            .col-12
+              | Each layer talk to its peer on other computer's stack. To do so, each leyer adds its own header (a.k.a. payload) to the data. One layer's header is another layer's data.
+            .col-8.off-2.pad-3
+              img.fill(src="images/headers.jpg", alt="")
+      .step.slide(data-x="5600", data-y="750" , data-z="200" data-rotate-x="10").sec2
+        .container
+          .row.title
+            .col-12 Interpretation of the Layers
+          .row
+            .col-12
+              ul.list
+                li
+                  | Buttom line:
+                  br
+                  | &emsp;&emsp;Eventually we will have a bunch of 0s &amp; 1s
+                li.anim.fade-in How do we know how to interpret them?
+                li.anim.fade-in Each protocol has its own layouts and formats.
+            .col-7.off-2.anim.fade-in
+              img.fill(src="images/ip_header.jpg", alt="", style="filter: opacity(0.8)")
+      .step.slide(data-x="4200", data-y="750" , data-z="200" data-rotate-x="10").sec3
+        .container
+          .row.title
+            .col-12.small Physical Addresses, MAC Addresses
+          .row
+            .col-12
+              ul.list
+                li From prespective of IP, they do not exist!
+                li They are how the Ethernet card interface with the network.
+                li On the contrary, the Ethernet card knows nothing about IP &amp; IP Addresses.
+                li So, a process to facilitate the correspondence is required.
+      .step.slide(data-x="2800", data-y="750" , data-z="200" data-rotate-x="10").sec3
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="1400", data-y="750" , data-z="200" data-rotate-x="10").sec3
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="0",    data-y="750" , data-z="200" data-rotate-x="10").sec3
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="0",    data-y="1500", data-z="200", data-rotate-x="-10").sec3
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="1400", data-y="1500", data-z="200", data-rotate-x="-10").sec4
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="2800", data-y="1500", data-z="200", data-rotate-x="-10").sec5
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="4200", data-y="1500", data-z="200", data-rotate-x="-10").sec5
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="5600", data-y="1500", data-z="200", data-rotate-x="-10").sec5
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="5600", data-y="2250", data-rotate-x="-30").sec5
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="4200", data-y="2250", data-rotate-x="-30").sec5
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="2800", data-y="2250", data-rotate-x="-30").sec6
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="1400", data-y="2250", data-rotate-x="-30").sec6
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="0"   , data-y="2250", data-rotate-x="-30").sec6
+        .container
+          .row
+            .col-12.title.ty Thank you!
+      #overview.step(data-x="2800", data-y="1110", data-scale="5")
+    script(src="js/impress.js")
+    script.
+      impress().init();
