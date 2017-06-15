@@ -10,8 +10,17 @@ $(document).ready(function() {
 });
 
 function insertSidebar() {
+  var number_of_sections = $(".navigation .li").length;
+
+  var section_number = 0;
+  $(".navigation li a").each(function() {
+    section_number++;
+    var first_slide_of_section = $(".step").index($(".step.sec" + section_number)) + 1;
+    $(this).prop("href", "#/step-" + first_slide_of_section);
+  });
+
   var page_number = 0;
-  var total_pages = "" + ($(".step").size() - 1);
+  var total_pages = "" + ($(".step").length - 1);
   $(".step").each(function(){
     if (++page_number !== 1) {
       $(this).addClass("have-sidebar").append($(".add-to-every-page").html());

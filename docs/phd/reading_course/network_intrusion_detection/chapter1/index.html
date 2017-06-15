@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Network Intrusion Detection Book - Chapter 1</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Network Intrusion Detection Book - Chapter 1</title>
-    <link rel="icon" type="image/png" href="cic.png">
-    <!-- Styles -->
-    <!-- link(rel="stylesheet", type="text/css", href="css/main.css")-->
-    <!-- link(href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic", rel="stylesheet")-->
-    <!-- link(href="http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css", rel="stylesheet")-->
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="js/jquery.js"></script>
-    <script src="js/main.js"></script>
+    <link rel="icon" type="image/png" href="../../_shared/images/cic_logo_small.png">
+    <!-- Styles-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif">
+    <link rel="stylesheet" href="../../_shared/css/base.css">
+    <link rel="stylesheet" href="../../_shared/css/mini-framework.css">
+    <link rel="stylesheet" href="../../_shared/css/main.css">
+    <!-- Scripts-->
+    <script src="../../_shared/js/jquery.js"></script>
+    <script src="../../_shared/js/main.js"></script>
   </head>
   <body class="impress-not-supported">
     <div class="fallback-message">
@@ -21,7 +21,7 @@
     </div>
     <div class="add-to-every-page">
       <div class="sidebar">
-        <div class="logo"><img src="images/cic_logo_large.png" alt=""></div>
+        <div class="logo"><img src="../../_shared/images/cic_logo_large.png" alt=""></div>
         <ul class="navigation">
           <li>Internet model</li>
           <li>Packaging data</li>
@@ -71,7 +71,7 @@
             <div class="col-12">Network Layers</div>
           </div>
           <div class="row">
-            <div class="col-10 off-1 pad-2"><img id="net_layers" src="images/network_layers.jpg" alt="" style="filter: opacity(0.8)" class="fill"></div>
+            <div class="col-10 off-1 pad-2"><img id="net_layers" src="images/network_layers.jpg" alt="" style="filter: opacity(0.8)" class="fill-width"></div>
           </div>
         </div>
       </div>
@@ -82,7 +82,7 @@
           </div>
           <div class="row">
             <div class="col-12">
-              <ul class="list">
+              <ul class="list compact">
                 <li>Bit: 0 or 1</li>
                 <li>Bytes: 8 bits (e.g. 00101110)<br>&emsp; It can contain ann ASCII caracter;<br>&emsp; and also positive integers no greater than 255.</li>
                 <li>Packets: Multiple bytes grouped together for shipping across the network by packaging them.</li>
@@ -99,7 +99,7 @@
           </div>
           <div class="row">
             <div class="col-12">Each layer talk to its peer on other computer's stack. To do so, each leyer adds its own header (a.k.a. payload) to the data. One layer's header is another layer's data.</div>
-            <div class="col-8 off-2 pad-3"><img src="images/headers.jpg" alt="" class="fill"></div>
+            <div class="col-8 off-2 pad-3"><img src="images/headers.jpg" alt="" class="fill-width"></div>
           </div>
         </div>
       </div>
@@ -110,13 +110,13 @@
           </div>
           <div class="row">
             <div class="col-12">
-              <ul class="list">
+              <ul class="list compact">
                 <li>Buttom line:<br>&emsp;&emsp;Eventually we will have a bunch of 0s &amp; 1s</li>
                 <li class="anim fade-in">How do we know how to interpret them?</li>
                 <li class="anim fade-in">Each protocol has its own layouts and formats.</li>
               </ul>
             </div>
-            <div class="col-7 off-2 anim fade-in"><img src="images/ip_header.jpg" alt="" style="filter: opacity(0.8)" class="fill"></div>
+            <div class="col-7 off-2 anim fade-in"><img src="images/ip_header.jpg" alt="" style="filter: opacity(0.8)" class="fill-width"></div>
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@
           </div>
           <div class="row">
             <div class="col-12">
-              <ul class="list">
+              <ul class="list compact">
                 <li>From prespective of IP, they do not exist!</li>
                 <li>They are how the Ethernet card interface with the network.</li>
                 <li>On the contrary, the Ethernet card knows nothing about IP &amp; IP Addresses.</li>
@@ -266,7 +266,7 @@
       </div>
       <div id="overview" data-x="2800" data-y="1110" data-scale="5" class="step"></div>
     </div>
-    <script src="js/impress.js"></script>
+    <script src="../../_shared/js/impress.js"></script>
     <script>impress().init();</script>
   </body>
 </html>

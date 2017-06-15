@@ -1,0 +1,286 @@
+// output: index.html
+doctype html
+html(lang="en")
+  head
+    title="Network Intrusion Detection and Prevention: Concepts and Techniques - Chapter 1"
+    include ../../_shared/head
+
+  body.impress-not-supported
+    .fallback-message
+      p
+        | Your browser 
+        b doesn't support the features required
+        |  by impress.js, so you are presented with a simplified version of this presentation.
+      p
+        | For the best experience please use the latest 
+        b Chrome
+        |  or 
+        b Firefox
+        |  browser.
+    .add-to-every-page
+      .sidebar
+        .logo
+          img(src=prefix+"images/cic_logo_large.png", alt="") 
+        ul.navigation
+          li
+            a(href="#") Attack Taxonomies
+          li
+            a(href="#") Probes
+          li
+            a(href="#") Privilege Escalation
+          li
+            a(href="#") DoS &amp; DDoS
+          li
+            a(href="#") Worm Attacks
+          li
+            a(href="#") Routing Attacks
+        .page-number
+    #impress
+      #first-page.step.slide(data-x="0",    data-y="0"   , data-rotate-x="+30")
+        .container
+          .row
+            h1.outlined-text.col-12 Network Intrusion Detection &amp; Prevention: Concepts &amp; Techniques
+            h2.outlined-text.col-12 Chapter 1: Network Attacks
+            h3.outlined-text.col-10.off-2.pad-3 Hamid Azimy
+            h4.outlined-text.col-10.off-2.pad-1 hamid.azimy@gmail.com
+            h5.outlined-text.col-10.off-2.pad-1 Canadian Inistitute for Cybersecurity
+      .step.slide(data-x="1400", data-y="0"   , data-rotate-x="+30")
+        .container
+          .row.title
+            .col-12 Outline
+          .row
+            .col-12
+              ul.list
+                li Attack Taxonomies
+                li Probes
+                li Privilege Escalation Attacks
+                li DoS &amp; DDoS
+                li Worm Attacks
+                li Routing Attacks
+      .step.slide(data-x="2800", data-y="0"   , data-rotate-x="+30").sec1
+        .container
+          .row.title
+            .col-12 VERDICT
+          .row.posed
+            .col-10.off-1.pad-2
+              | It stands for
+              ul.list.compact.navy
+                li
+                  .u V
+                  | alidation
+                li
+                  .u E
+                  | xposure
+                li
+                  .u R
+                  | andomness
+                li
+                  .u D
+                  | eallocation
+              ul.compact(style="margin-left: 2rem")
+                li
+                  .u I
+                  | mproper
+                li
+                  .u C
+                  | ondition
+                li
+                  .u T
+                  | axonomy
+            .col-6.frame-1.xxsmall.anim.fade-in(style="position: absolute; left: 40%; right:0; top: 5rem; bottom: 5rem;")
+              | Insufficient or incorrect validations will lead an unauthorized access to critical information or a protected system.
+            .col-6.frame-1.xxsmall.anim.fade-in(style="position: absolute; left: 40%; right:0; top: 5rem; bottom: 5rem;")
+              | The improper exposure always happens if the specific exposure conditions are satisfied.
+            .col-6.frame-1.xxsmall.anim.fade-in(style="position: absolute; left: 40%; right:0; top: 5rem; bottom: 5rem;")
+              | Lack of true randomness for using in cryptography make it very difficult to develop unbreakable ciphering.
+            .col-6.frame-1.xxsmall.anim.fade-in(style="position: absolute; left: 40%; right:0; top: 5rem; bottom: 5rem;")
+              | It means the information stored on the system is not properly deleted after use.
+      .step.slide(data-x="4200", data-y="0"   , data-rotate-x="+30").sec1
+        .container
+          .row.title
+            .col-12 Hansman's Taxonomy
+          .row
+            .col-12
+              | It includes 4 dimensions:
+            .col-10.off-1
+              ol.list(style="list-style-type: decimal;")
+                li Main behavior of attack
+                li Type of target
+                li Vulnerabilities &amp; Exploits
+                li Payload
+      .step.slide(data-x="5600", data-y="0"   , data-rotate-x="+30").sec1
+        .container
+          .row.title
+            .col-12 D1: Main behavior of attack
+          .row
+            .col-12
+              | In this dimension, attacks classify into 10 categories:
+            .col-5.off-1.pad-1.xsmall
+              ul.list
+                li.anim.fade-in Virus
+                li.anim.fade-in Worm
+                li.anim.fade-in Trojan
+                li.anim.fade-in Buffer overflow
+                li.anim.fade-in Denial of service
+            .col-5.pad-1.xsmall
+              ul.list
+                li.anim.fade-in Network attack
+                li.anim.fade-in Physical attack
+                li.anim.fade-in Password attack
+                li.anim.fade-in Information gathering
+                li.anim.fade-in ??? #[.xxsmall (The book says "10 categories" but there are 9 categories listed! So...)]
+      .step.slide(data-x="5600", data-y="750" , data-z="200" data-rotate-x="10").sec1
+        .container
+          .row.title
+            .col-12 D2: Type of target
+          .row
+            .col-12
+              | Targets can be Hardware or Software.
+            .col-5.pad-2.off-1
+              | Hardware:
+              ul.list.small
+                li.anim.fade-in Computer equipment
+                  .xsmall (CPU, Hard disk, etc.)
+                li.anim.fade-in Network equipment
+                  .xsmall (Router, Switch, etc.)
+                li.anim.fade-in Peripheral Devices
+                  .xsmall (Mouse, Keyboard, etc.)
+            .col-6.pad-2
+              | Software:
+              ul.list.small
+                li.anim.fade-in Operating system
+                  .xsmall (Linux, Windows, etc.)
+                li.anim.fade-in Network
+                  .xsmall (Transport layer protocol, etc.)
+                li.anim.fade-in Applications
+                  .xsmall (web server, database server, etc.)
+
+      .step.slide(data-x="4200", data-y="750" , data-z="200" data-rotate-x="10").sec1
+        .container
+          .row.title D3: Vulnerabilities &amp; Exploits
+            .col-12
+          .row
+            .col-12(style="line-height: 200%;")
+              | The CVE (Common Vulnerabilities and Exposures) project is designed
+              | to produce common definitions of vulnerabilities.
+              | Once vulnerabilities that an attack exploits are known, the
+              | relevant CVE entries can be found.
+      .step.slide(data-x="2800", data-y="750" , data-z="200" data-rotate-x="10").sec1
+        .container
+          .row
+            .col-12.title D4: Payload
+          .row
+            .col-12
+              | Different payloads may have different effect beyond the attack itself.
+              | The payloads are classified into 5 categories:
+              ul.list.compact
+                li First dimension attack payload
+                li Corruption of information
+                li Disclosure of information
+                li Theft of service
+                li Subversion
+      .step.slide(data-x="1400", data-y="750" , data-z="200" data-rotate-x="10").sec2
+        .container
+          .row
+            .col-12.title Probes
+          .row
+            .col-12
+              ul.list
+                li IPSweep &amp; PortSweep
+                li NMap
+                li MScan
+                li SAINT
+                li Satan
+      .step.slide(data-x="0",    data-y="750" , data-z="200" data-rotate-x="10").sec3
+        .container
+          .row
+            .col-12.title Privilege Escalation Attack
+          .row
+            .col-12 Categories:
+            .col-10.off-1
+              ol.list.compact.small
+                li.b.i.anim.fade-in Vertical Escalation: &emsp;&emsp;&emsp; User ⟶ Superuser
+                li.b.i.anim.fade-in Horizontal Escalation: &emsp;&emsp; Non-user ⟶ User
+            .col-12.vspace
+            .col-12 Examples:
+            .col-10.off-1
+              ul.list.compact.small
+                li.i.anim.fade-in Buffer Overflow Attacks
+                li.i.anim.fade-in Misconfiguration Attacks
+                li.i.anim.fade-in Race-condition Attacks
+                li.i.anim.fade-in Man-in-the-Middle Attacks
+                li.i.anim.fade-in Social Engineering Attacks
+      .step.slide(data-x="0",    data-y="1500", data-z="200", data-rotate-x="-10").sec4
+        .container
+          .row
+            .col-12.title DoS Attacks
+          .row
+            .col-12.anim.scale-up
+              | #[.center.bluish-text #[span.i DoS] stands for #[span.i "Denial of Service"]]
+              ul.list
+                li.anim.droppp #[span.b.i.redish-text Purpose:] To interfere with the normal operation of network services.
+                li.anim.droppp #[span.b.i.redish-text Method:] Flooding, exhausting and overwhelming the resources of the targeted network or host.
+                li.anim.droppp #[span.b.i.redish-text Resources:] Network bandwidth, router’s packet forwarding capacity, name servers, memory/computing power on servers, etc.
+      .step.slide(data-x="1400", data-y="1500", data-z="200", data-rotate-x="-10").sec4
+        .container
+          .row
+            .col-12.title DDoS Attacks
+          .row
+            .col-12.anim.scale-up
+              | #[.center.bluish-text #[span.i DDoS] stands for #[span.i "Distributed DoS"]]
+              ul.list
+                li.anim.scale-up #[span.b.i.greenish-text Why?] Unlike attakers, vistims are usually powerful servers with fast network connections.
+                li.anim.scale-up
+                li.anim.scale-up
+      .step.slide(data-x="2800", data-y="1500", data-z="200", data-rotate-x="-10").sec5
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="4200", data-y="1500", data-z="200", data-rotate-x="-10").sec5
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="5600", data-y="1500", data-z="200", data-rotate-x="-10").sec5
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="5600", data-y="2250", data-rotate-x="-30").sec5
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="4200", data-y="2250", data-rotate-x="-30").sec5
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="2800", data-y="2250", data-rotate-x="-30").sec6
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="1400", data-y="2250", data-rotate-x="-30").sec6
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      .step.slide(data-x="0"   , data-y="2250", data-rotate-x="-30").sec6
+        .container
+          .row
+            .col-12.title.ty Thank you!
+      #overview.step(data-x="2800", data-y="1110", data-scale="5")
+    script(src=prefix+"js/impress.js")
+    script(src=prefix+"js/impressConsole.js")
+    script.
+      impress().init();
+      impressConsole().init();

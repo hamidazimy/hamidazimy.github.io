@@ -26,6 +26,7 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -51,16 +52,17 @@ table {
     border-spacing: 0;
 }
 
-html {
-    font-size: 16px;
-    font-family: "Droid Serif", "Djavu Serif", "Cambria", serif;
-}
-
 /*
     Now here is when interesting things start to appear.
 
     We set up <body> styles with default font and nice gradient in the background.
 */
+
+html {
+    font-size: 16px;
+    font-family: "Droid Serif", "Djavu Serif", "Cambria", serif;
+}
+
 body {
     min-height: 740px;
     background: rgb(215, 215, 215);
@@ -70,8 +72,8 @@ body {
 /*
     Now let's bring some text styles back ...
 */
-b, strong { font-weight: bold }
-i, em { font-style: italic }
+b, strong, .b { font-weight: bold }
+i, em, .i { font-style: italic }
 
 /*
     ... and give links a nice look.
@@ -173,6 +175,11 @@ a:focus {
 
     font-size: 2rem;
     line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.slide * {
+    box-sizing: border-box;
 }
 
 /*
@@ -191,6 +198,11 @@ a:focus {
     opacity: 1;
     cursor: pointer;
 }
+
+/*
+    This is for hiding notes from impressConsole.
+*/
+.step .notes { display: none; }
 
 /*
     And as the last thing there is a workaround for quite strange bug.
@@ -218,24 +230,20 @@ a:focus {
 
 /*
     That's all!
-    Thanks for reading. I hope you enjoyed it at least as much as I enjoyed writing it
-    for you.
+    Thanks for reading. I hope you enjoyed it at least as much as
+    I enjoyed writing it for you.
 */
 
-[class*='MathJax'] {
-    direction: ltr;
-    font-family: "Droid Serif";
-}
-
-.slide * {
-    box-sizing: border-box;
-}
+/*
+    Aaaand! Here is a mini-framework to making slides faster!
+*/
 
 .container {
     margin-right: auto;
     margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    line-height: 1.4 !important;
 }
 
 .container:before, .container:after {
@@ -247,9 +255,26 @@ a:focus {
     clear: both;
 }
 
+.posed {
+    position: relative;
+}
+
+.vspace {
+    height: 1rem;
+}
+
+.fill-width {
+    width: 100%;
+    height: auto;
+}
+.fill {
+    width: 100%;
+    height: 100%;
+}
+
 .row {
-    margin-right: -15px;
-    margin-left: -15px;
+    margin-right: -1rem;
+    margin-left: -1rem;
 }
 
 .row:before, .row:after {
@@ -265,8 +290,8 @@ a:focus {
     float: left;
     position: relative;
     min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .col-1 {
@@ -408,125 +433,13 @@ h6, .h6 {
     font-size: 1.0rem;
 }
 
-.outlined {
-    text-shadow:
-        -2px -2px 0 #000,
-        2px -2px 0 #000,
-        -2px 2px 0 #000,
-        2px 2px 0 #000;
-}
-
-.navy {
-    color: #215968;
-}
-
-#first-page {
-    background-image: url('../images/cic_back.jpg');
-    background-size: cover;
-
-    color: rgb(222, 222, 222);
-}
-
-.add-to-every-page {
-    display: none;
-}
-.have-sidebar {
-    padding-left: 330px;
-}
-.sidebar {
-    width: 270px;
-    position: absolute;
-    left: 0;
-    top: -10px;
-    bottom: -10px;
-    padding: 30px 0;
-    background-color: #EEE;
-    box-shadow: -4px 0px 6px 0px rgba(0, 0, 0, 0.5) inset;
-    overflow: hidden;
-}
-.logo {
-    position: relative;
-    left: -4px;
-}
-.logo img {
-    display: block;
-    margin: 0 auto;
-    max-width: 60%;
-}
-.navigation {
-    width: 100%;
-    position: relative;
-    right: 0;
-    top: 0px;
-    bottom: 0px;
-    overflow: hidden;
-}
-.navigation li {
-    width: 96%;
-    height: 60px;
-    margin: 0 !important;
-    float: right;
-    color: #666;
-    font-size: 1.2rem;
-    text-align: right;
-    box-sizing: border-box;
-    padding: 12px 24px;
-    line-height: 2;
-}
-.sec1 .navigation li:nth-child(1),
-.sec2 .navigation li:nth-child(2),
-.sec3 .navigation li:nth-child(3),
-.sec4 .navigation li:nth-child(4),
-.sec5 .navigation li:nth-child(5),
-.sec6 .navigation li:nth-child(6) {
-    width: 100%;
-    position: relative;
-    right: -8px;
-    border-right: none;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background-color: #FFF;
-    box-shadow: -4px 4px 6px 0px rgba(0, 0, 0, 0.5);
-    color: #146;
-}
-.page-number {
-    position: absolute;
-    left: -4px;
-    bottom: 20px;
-    text-align: center;
-    width: 100%;
-    font-size: 1.4rem;
-}
-
-#first-page h1 {
-    padding-top: 7rem;
-    text-align: center;
-    font-size: 3rem;
-    font-weight: bolder;
-}
-
-#first-page h2 {
-    text-align: center;
-    padding: 1rem 0 5rem;
-}
-
-.title {
-    font-size: 3.0rem;
-    font-weight: 800;
-    letter-spacing: 0.1rem;
-    margin: 1rem 0 3rem;
-    text-align: center;
-    /*
-    width: 100%;
-    height: 20%;
-    font-size: 240%;
-    padding-top: 40px;
-    box-sizing: border-box;
-    */
+ol.list {
+  list-style: decimal;
 }
 .list {
     list-style: disc;
-    margin-left: 2rem
+    margin-left: 2rem;
+    margin-top: 2rem;
 }
 .list .list {
     list-style: circle;
@@ -541,28 +454,6 @@ h6, .h6 {
 .list.compact li {
     margin-bottom: 0.3rem;
 }
-.vspace {
-    height: 1rem;
-}
-.fill {
-    width: 100%;
-    height: auto;
-}
-
-.fade-in {
-    opacity: 0;
-    transition: all 2s;
-}
-
-.fade-in.anim-x {
-    opacity: 1;
-}
-
-.ty {
-    margin-top: 15rem;
-}
-
-
 
 .xxxlarge {
     font-size: 200%;
@@ -590,4 +481,13 @@ h6, .h6 {
 }
 .xxxsmall {
     font-size: 50%;
+}
+
+.center {
+    text-align: center;
+}
+
+.u {
+    display: inline;
+    text-decoration: underline;
 }

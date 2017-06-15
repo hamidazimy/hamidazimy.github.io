@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Network Intrusion Detection and Prevention: Concepts and Techniques - Chapter 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../../_shared/images/cic_logo_small.png">
+    <!-- Styles-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif">
+    <link rel="stylesheet" href="../../_shared/css/base.css">
+    <link rel="stylesheet" href="../../_shared/css/main.css">
+    <link rel="stylesheet" href="../../_shared/css/animations.css">
+    <!-- Scripts-->
+    <script src="../../_shared/js/jquery.js"></script>
+    <script src="../../_shared/js/main.js"></script>
+  </head>
+  <body class="impress-not-supported">
+    <div class="fallback-message">
+      <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+      <p>For the best experience please use the latest <b>Chrome</b> or <b>Firefox</b> browser.</p>
+    </div>
+    <div class="add-to-every-page">
+      <div class="sidebar">
+        <div class="logo"><img src="../../_shared/images/cic_logo_large.png" alt=""></div>
+        <ul class="navigation">
+          <li><a href="#">Attack Taxonomies</a></li>
+          <li><a href="#">Probes</a></li>
+          <li><a href="#">Privilege Escalation</a></li>
+          <li><a href="#">DoS &amp; DDoS</a></li>
+          <li><a href="#">Worm Attacks</a></li>
+          <li><a href="#">Routing Attacks</a></li>
+        </ul>
+        <div class="page-number"></div>
+      </div>
+    </div>
+    <div id="impress">
+      <div id="first-page" data-x="0" data-y="0" data-rotate-x="+30" class="step slide">
+        <div class="container">
+          <div class="row">
+            <h1 class="outlined-text col-12">Network Intrusion Detection &amp; Prevention: Concepts &amp; Techniques</h1>
+            <h2 class="outlined-text col-12">Chapter 1: Network Attacks</h2>
+            <h3 class="outlined-text col-10 off-2 pad-3">Hamid Azimy</h3>
+            <h4 class="outlined-text col-10 off-2 pad-1">hamid.azimy@gmail.com</h4>
+            <h5 class="outlined-text col-10 off-2 pad-1">Canadian Inistitute for Cybersecurity</h5>
+          </div>
+        </div>
+      </div>
+      <div data-x="1400" data-y="0" data-rotate-x="+30" class="step slide">
+        <div class="container">
+          <div class="row title">
+            <div class="col-12">Outline</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <ul class="list">
+                <li>Attack Taxonomies</li>
+                <li>Probes</li>
+                <li>Privilege Escalation Attacks</li>
+                <li>DoS &amp; DDoS</li>
+                <li>Worm Attacks</li>
+                <li>Routing Attacks</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-x="2800" data-y="0" data-rotate-x="+30" class="step slide sec1">
+        <div class="container">
+          <div class="row title">
+            <div class="col-12">VERDICT</div>
+          </div>
+          <div class="row posed">
+            <div class="col-10 off-1 pad-2">It stands for
+              <ul class="list compact navy">
+                <li>
+                  <div class="u">V</div>alidation
+                </li>
+                <li>
+                  <div class="u">E</div>xposure
+                </li>
+                <li>
+                  <div class="u">R</div>andomness
+                </li>
+                <li>
+                  <div class="u">D</div>eallocation
+                </li>
+              </ul>
+              <ul style="margin-left: 2rem" class="compact">
+                <li>
+                  <div class="u">I</div>mproper
+                </li>
+                <li>
+                  <div class="u">C</div>ondition
+                </li>
+                <li>
+                  <div class="u">T</div>axonomy
+                </li>
+              </ul>
+            </div>
+            <div style="position: absolute; left: 40%; right:0; top: 5rem; bottom: 5rem;" class="col-6 frame-1 xxsmall anim fade-in">Insufficient or incorrect validations will lead an unauthorized access to critical information or a protected system.</div>
+            <div style="position: absolute; left: 40%; right:0; top: 5rem; bottom: 5rem;" class="col-6 frame-1 xxsmall anim fade-in">The improper exposure always happens if the specific exposure conditions are satisfied.</div>
+            <div style="position: absolute; left: 40%; right:0; top: 5rem; bottom: 5rem;" class="col-6 frame-1 xxsmall anim fade-in">Lack of true randomness for using in cryptography make it very difficult to develop unbreakable ciphering.</div>
+            <div style="position: absolute; left: 40%; right:0; top: 5rem; bottom: 5rem;" class="col-6 frame-1 xxsmall anim fade-in">It means the information stored on the system is not properly deleted after use.</div>
+          </div>
+        </div>
+      </div>
+      <div data-x="4200" data-y="0" data-rotate-x="+30" class="step slide sec1">
+        <div class="container">
+          <div class="row title">
+            <div class="col-12">Hansman's Taxonomy</div>
+          </div>
+          <div class="row">
+            <div class="col-12">It includes 4 dimensions:</div>
+            <div class="col-10 off-1">
+              <ol style="list-style-type: decimal;" class="list">
+                <li>Main behavior of attack</li>
+                <li>Type of target</li>
+                <li>Vulnerabilities &amp; Exploits</li>
+                <li>Payload</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-x="5600" data-y="0" data-rotate-x="+30" class="step slide sec1">
+        <div class="container">
+          <div class="row title">
+            <div class="col-12">D1: Main behavior of attack</div>
+          </div>
+          <div class="row">
+            <div class="col-12">In this dimension, attacks classify into 10 categories:</div>
+            <div class="col-5 off-1 pad-1 xsmall">
+              <ul class="list">
+                <li class="anim fade-in">Virus</li>
+                <li class="anim fade-in">Worm</li>
+                <li class="anim fade-in">Trojan</li>
+                <li class="anim fade-in">Buffer overflow</li>
+                <li class="anim fade-in">Denial of service</li>
+              </ul>
+            </div>
+            <div class="col-5 pad-1 xsmall">
+              <ul class="list">
+                <li class="anim fade-in">Network attack</li>
+                <li class="anim fade-in">Physical attack</li>
+                <li class="anim fade-in">Password attack</li>
+                <li class="anim fade-in">Information gathering</li>
+                <li class="anim fade-in">??? 
+                  <div class="xxsmall">(The book says "10 categories" but there are 9 categories listed! So...)</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-x="5600" data-y="750" data-z="200" data-rotate-x="10" class="step slide sec1">
+        <div class="container">
+          <div class="row title">
+            <div class="col-12">D2: Type of target</div>
+          </div>
+          <div class="row">
+            <div class="col-12">Targets can be Hardware or Software.</div>
+            <div class="col-5 pad-2 off-1">Hardware:
+              <ul class="list small">
+                <li class="anim fade-in">Computer equipment
+                  <div class="xsmall">(CPU, Hard disk, etc.)</div>
+                </li>
+                <li class="anim fade-in">Network equipment
+                  <div class="xsmall">(Router, Switch, etc.)</div>
+                </li>
+                <li class="anim fade-in">Peripheral Devices
+                  <div class="xsmall">(Mouse, Keyboard, etc.)</div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6 pad-2">Software:
+              <ul class="list small">
+                <li class="anim fade-in">Operating system
+                  <div class="xsmall">(Linux, Windows, etc.)</div>
+                </li>
+                <li class="anim fade-in">Network
+                  <div class="xsmall">(Transport layer protocol, etc.)</div>
+                </li>
+                <li class="anim fade-in">Applications
+                  <div class="xsmall">(web server, database server, etc.)</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-x="4200" data-y="750" data-z="200" data-rotate-x="10" class="step slide sec1">
+        <div class="container">
+          <div class="row title">D3: Vulnerabilities &amp; Exploits
+            <div class="col-12"></div>
+          </div>
+          <div class="row">
+            <div style="line-height: 200%;" class="col-12">
+              The CVE (Common Vulnerabilities and Exposures) project is designed
+              to produce common definitions of vulnerabilities.
+              Once vulnerabilities that an attack exploits are known, the
+              relevant CVE entries can be found.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-x="2800" data-y="750" data-z="200" data-rotate-x="10" class="step slide sec1">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title">D4: Payload</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              Different payloads may have different effect beyond the attack itself.
+              The payloads are classified into 5 categories:
+              <ul class="list compact">
+                <li>First dimension attack payload</li>
+                <li>Corruption of information</li>
+                <li>Disclosure of information</li>
+                <li>Theft of service</li>
+                <li>Subversion</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-x="1400" data-y="750" data-z="200" data-rotate-x="10" class="step slide sec2">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title">Probes</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <ul class="list">
+                <li>IPSweep &amp; PortSweep</li>
+                <li>NMap</li>
+                <li>MScan</li>
+                <li>SAINT</li>
+                <li>Satan</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-x="0" data-y="750" data-z="200" data-rotate-x="10" class="step slide sec3">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title">Privilege Escalation Attack</div>
+          </div>
+          <div class="row">
+            <div class="col-12">Categories:</div>
+            <div class="col-10 off-1">
+              <ol class="list compact small">
+                <li class="b i anim fade-in">Vertical Escalation: &emsp;&emsp;&emsp; User ⟶ Superuser</li>
+                <li class="b i anim fade-in">Horizontal Escalation: &emsp;&emsp; Non-user ⟶ User</li>
+              </ol>
+            </div>
+            <div class="col-12 vspace"></div>
+            <div class="col-12">Examples:</div>
+            <div class="col-10 off-1">
+              <ul class="list compact small">
+                <li class="i anim fade-in">Buffer Overflow Attacks</li>
+                <li class="i anim fade-in">Misconfiguration Attacks</li>
+                <li class="i anim fade-in">Race-condition Attacks</li>
+                <li class="i anim fade-in">Man-in-the-Middle Attacks</li>
+                <li class="i anim fade-in">Social Engineering Attacks</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-x="0" data-y="1500" data-z="200" data-rotate-x="-10" class="step slide sec4">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title">DoS Attacks</div>
+          </div>
+          <div class="row">
+            <div class="col-12 anim scale-up">
+              <div class="center bluish-text"><span class="i">DoS</span> stands for <span class="i">"Denial of Service"</span></div>
+              <ul class="list">
+                <li class="anim droppp"><span class="b i redish-text">Purpose:</span> To interfere with the normal operation of network services.</li>
+                <li class="anim droppp"><span class="b i redish-text">Method:</span> Flooding, exhausting and overwhelming the resources of the targeted network or host.</li>
+                <li class="anim droppp"><span class="b i redish-text">Resources:</span> Network bandwidth, router’s packet forwarding capacity, name servers, memory/computing power on servers, etc.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-x="1400" data-y="1500" data-z="200" data-rotate-x="-10" class="step slide sec4">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title">DDoS Attacks</div>
+          </div>
+          <div class="row">
+            <div class="col-12 anim scale-up">
+              <div class="center bluish-text"><span class="i">DDoS</span> stands for <span class="i">"Distributed DoS"</span></div>
+              <ul class="list">
+                <li class="anim scale-up"><span class="b i greenish-text">Why?</span> Unlike attakers, vistims are usually powerful servers with fast network connections.</li>
+                <li class="anim scale-up"></li>
+                <li class="anim scale-up"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-x="2800" data-y="1500" data-z="200" data-rotate-x="-10" class="step slide sec5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="4200" data-y="1500" data-z="200" data-rotate-x="-10" class="step slide sec5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="5600" data-y="1500" data-z="200" data-rotate-x="-10" class="step slide sec5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="5600" data-y="2250" data-rotate-x="-30" class="step slide sec5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="4200" data-y="2250" data-rotate-x="-30" class="step slide sec5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="2800" data-y="2250" data-rotate-x="-30" class="step slide sec6">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="1400" data-y="2250" data-rotate-x="-30" class="step slide sec6">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"></div>
+          </div>
+          <div class="row">
+            <div class="col-12"></div>
+          </div>
+        </div>
+      </div>
+      <div data-x="0" data-y="2250" data-rotate-x="-30" class="step slide sec6">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title ty">Thank you!</div>
+          </div>
+        </div>
+      </div>
+      <div id="overview" data-x="2800" data-y="1110" data-scale="5" class="step"></div>
+    </div>
+    <script src="../../_shared/js/impress.js"></script>
+    <script src="../../_shared/js/impressConsole.js"></script>
+    <script>
+      impress().init();
+      impressConsole().init();
+    </script>
+  </body>
+</html>
