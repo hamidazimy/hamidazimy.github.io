@@ -230,38 +230,64 @@ html(lang="en")
               | #[.center.bluish-text #[span.i DDoS] stands for #[span.i "Distributed DoS"]]
               ul.list
                 li.anim.scale-up #[span.b.i.greenish-text Why?] Unlike attakers, vistims are usually powerful servers with fast network connections.
-                li.anim.scale-up
-                li.anim.scale-up
-      .step.slide(data-x="2800", data-y="1500", data-z="200", data-rotate-x="-10").sec5
+                li.anim.scale-up #[span.b.i.greenish-text How?] The attacker distributes the attack script over multiple intermediate hosts, called zombies or bots. The attacker exploits the security, configuration, or software flaws on the zombie hosts in order to control them
+      .step.slide(data-x="2800", data-y="1500", data-z="200", data-rotate-x="-10").sec4
         .container
           .row
-            .col-12.title
+            .col-12.title Detection Approaches
           .row
             .col-12
-      .step.slide(data-x="4200", data-y="1500", data-z="200", data-rotate-x="-10").sec5
+              ul.list
+                li Signature-based
+                li Deviation from Normal Behavior
+                li Statistics-based
+                li Near Target Detection
+                li Near Source Detection
+      .step.slide(data-x="4200", data-y="1500", data-z="200", data-rotate-x="-10").sec4
         .container
           .row
-            .col-12.title
+            .col-12.title Prevention &amp; Response
           .row
             .col-12
-      .step.slide(data-x="5600", data-y="1500", data-z="200", data-rotate-x="-10").sec5
+              ul.list
+                li Block anomalous traffic
+                li Preventing backets with spoofed IPs to be transmitted
+                li The router near the victim server drops malicious packets
+      .step.slide(data-x="5600", data-y="1500", data-z="200", data-rotate-x="-10").sec4
         .container
           .row
-            .col-12.title
+            .col-12.title Examples
           .row
             .col-12
+              ul.list.compact
+                li.anim.scale-down TCP-SYN Flood
+                li.anim.scale-down ICMP/UDP Flood Attack
+                li.anim.scale-down Ping of Death
+                li.anim.scale-down Smurf
+                li.anim.scale-down Process Table
+                li.anim.scale-down UDPStorm
+                li.anim.scale-down Syslogd
+                li.anim.scale-down Mailbomb
+                li.anim.scale-down Apache2
       .step.slide(data-x="5600", data-y="2250", data-rotate-x="-30").sec5
         .container
           .row
-            .col-12.title
+            .col-12.title Worm Attacks
           .row
             .col-12
+              ul.list
+                li Worms replicate themselves from system to system without the use of a host file (in spite of viruses) and perform malicious actions
+                li The Morris worm is one of the first computer worms
+                li The idea behind, is arget vulnerabilities in daemon processes of important network services through exploiting the static buffer overflow.
       .step.slide(data-x="4200", data-y="2250", data-rotate-x="-30").sec5
         .container
           .row
-            .col-12.title
+            .col-12.title Modeling and Analysis
           .row
             .col-12
+              ul.list
+                li Traditional Epidemic Models
+                li 
       .step.slide(data-x="2800", data-y="2250", data-rotate-x="-30").sec6
         .container
           .row

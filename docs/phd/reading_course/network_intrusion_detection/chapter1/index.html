@@ -71,7 +71,7 @@
             <div class="col-12">Network Layers</div>
           </div>
           <div class="row">
-            <div class="col-10 off-1 pad-2"><img id="net_layers" src="images/network_layers.jpg" alt="" style="filter: opacity(0.8)" class="fill-width"></div>
+            <div class="col-10 off-1 pad-2"><img id="net_layers" src="images/network_layers.jpg" alt="" style="filter: opacity(0.8)" class="fill-width compact anim rotate-and-scale"></div>
           </div>
         </div>
       </div>
@@ -127,11 +127,11 @@
           </div>
           <div class="row">
             <div class="col-12">
-              <ul class="list compact">
-                <li>From prespective of IP, they do not exist!</li>
-                <li>They are how the Ethernet card interface with the network.</li>
-                <li>On the contrary, the Ethernet card knows nothing about IP &amp; IP Addresses.</li>
-                <li>So, a process to facilitate the correspondence is required.</li>
+              <ul class="list">
+                <li class="anim window">From prespective of IP, they do not exist!</li>
+                <li class="anim window">They are how the Ethernet card interface with the network.</li>
+                <li class="anim window">On the contrary, the Ethernet card knows nothing about IP &amp; IP Addresses.</li>
+                <li class="anim window">So, a process to facilitate the correspondence is required.</li>
               </ul>
             </div>
           </div>
@@ -140,10 +140,22 @@
       <div data-x="2800" data-y="750" data-z="200" data-rotate-x="10" class="step slide sec3">
         <div class="container">
           <div class="row">
-            <div class="col-12 title"></div>
+            <div class="col-12 title">ARP (Address Resolution Protocol)</div>
           </div>
           <div class="row">
-            <div class="col-12"></div>
+            <div class="col-12">
+              <ul class="list compact">
+                <li class="pad-1">Not an IP protocol per se.</li>
+                <li class="pad-1">For localy attached hosts only; on the same network.</li>
+                <li class="pad-1">Translate physical MAC addresses to logical IP addresses
+                  <ul class="list compact low-margin">
+                    <li class="anim fade-in">The source host sends an ARP request.</li>
+                    <li class="anim fade-in">The destination host picks it up and replies with its MAC address. (Others just ignore it.)</li>
+                    <li class="anim fade-in">All listening hosts (including source and destination) store IP &amp; MAC record for later use.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

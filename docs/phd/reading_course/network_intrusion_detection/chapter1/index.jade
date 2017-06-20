@@ -58,7 +58,7 @@ html(lang="en")
             .col-12 Network Layers
           .row
             .col-10.off-1.pad-2
-              img#net_layers.fill-width(src="images/network_layers.jpg", alt="", style="filter: opacity(0.8)")
+              img#net_layers.fill-width.compact.anim.rotate-and-scale(src="images/network_layers.jpg", alt="", style="filter: opacity(0.8)")
       .step.slide(data-x="4200", data-y="0"   , data-rotate-x="+30").sec2
         .container
           .row.title
@@ -105,17 +105,25 @@ html(lang="en")
             .col-12.small Physical Addresses, MAC Addresses
           .row
             .col-12
-              ul.list.compact
-                li From prespective of IP, they do not exist!
-                li They are how the Ethernet card interface with the network.
-                li On the contrary, the Ethernet card knows nothing about IP &amp; IP Addresses.
-                li So, a process to facilitate the correspondence is required.
+              ul.list
+                li.anim.window From prespective of IP, they do not exist!
+                li.anim.window They are how the Ethernet card interface with the network.
+                li.anim.window On the contrary, the Ethernet card knows nothing about IP &amp; IP Addresses.
+                li.anim.window So, a process to facilitate the correspondence is required.
       .step.slide(data-x="2800", data-y="750" , data-z="200" data-rotate-x="10").sec3
         .container
           .row
-            .col-12.title
+            .col-12.title ARP (Address Resolution Protocol)
           .row
             .col-12
+              ul.list.compact
+                li.pad-1 Not an IP protocol per se.
+                li.pad-1 For localy attached hosts only; on the same network.
+                li.pad-1 Translate physical MAC addresses to logical IP addresses
+                  ul.list.compact.low-margin
+                    li.anim.fade-in The source host sends an ARP request.
+                    li.anim.fade-in The destination host picks it up and replies with its MAC address. (Others just ignore it.)
+                    li.anim.fade-in All listening hosts (including source and destination) store IP &amp; MAC record for later use.
       .step.slide(data-x="1400", data-y="750" , data-z="200" data-rotate-x="10").sec3
         .container
           .row

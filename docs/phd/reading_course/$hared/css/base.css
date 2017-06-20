@@ -137,6 +137,7 @@ a:focus {
     padding: 40px;
     margin: 20px auto;
     box-sizing: border-box;
+    transform-origin: center;
 }
 
 /*
@@ -440,6 +441,9 @@ ol.list {
     list-style: disc;
     margin-left: 2rem;
     margin-top: 2rem;
+}
+.list.low-margin {
+    margin-top: 0.2rem;
 }
 .list .list {
     list-style: circle;

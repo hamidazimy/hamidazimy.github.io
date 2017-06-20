@@ -27,6 +27,27 @@
     opacity: 1;
 }
 
+.rotate-and-scale {
+    transition: 2s all;
+    transform: rotate(-360deg) scale(0.1);
+    opacity: 0;
+}
+
+.rotate-and-scale.anim-x {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+}
+
+.window {
+    transition: 2s all ease-out;
+    transform-origin: left;
+    transform: rotateY(90deg);
+}
+
+.window.anim-x {
+    transform: rotateY(0);
+}
+
 .drop {
     transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform: translateY(-15rem);
