@@ -1,13 +1,23 @@
 $(document).ready(function() {
-  insertSidebar();
   var qs = getQueryStrings();
-  if (qs["lang"] == "fa") {
-    alert("سلام!");
-  }
-  if (qs["lang"] == "en") {
-    alert("Hello!");
-  }
+  $('html').addClass("lang-" + qs["lang"]);
+  insertSidebar();
+  arrangeSlides();
+  impress().init();
+  impressConsole().init();
 });
+
+function arrangeSlides() {
+  var n = $(".slide").length;
+  var r = 144 * n + (n < 8) * (8 - n) * 72;
+  var i = 0;
+  $(".slide").each(function() {
+    $(this).get()[0].setAttribute("data-rotate", 360 / n * i);
+    $(this).get()[0].setAttribute("data-y", Math.sin(2 * Math.PI / n * i) * r);
+    $(this).get()[0].setAttribute("data-x", Math.cos(2 * Math.PI / n * i) * r);
+    i++;
+  });
+}
 
 function insertSidebar() {
   var number_of_sections = $(".navigation .li").length;

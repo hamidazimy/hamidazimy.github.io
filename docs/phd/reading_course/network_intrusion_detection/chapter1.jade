@@ -1,9 +1,9 @@
-// output: index.html
+// output: chapter1.html
 doctype html
 html(lang="en")
   head
     title="Network Intrusion Detection Book - Chapter 1"
-    include ../../$hared/head
+    include ../$hared/head
 
   body.impress-not-supported
     .fallback-message
@@ -198,3 +198,4 @@ html(lang="en")
     script(src=prefix+"js/impress.js")
     script.
       impress().init();
+      impressConsole().init();

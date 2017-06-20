@@ -1,0 +1,64 @@
+// output: template.html
+doctype html
+html(lang="en")
+  head
+    title="{{{Title goes here!}}}"
+    include ../$hared/head
+
+  body.impress-not-supported
+    .fallback-message
+      p
+        | Your browser 
+        b doesn't support the features required
+        |  by impress.js, so you are presented with a simplified version of this presentation.
+      p
+        | For the best experience please use the latest 
+        b Chrome
+        |  or 
+        b Firefox
+        |  browser.
+    .add-to-every-page
+      .sidebar
+        .logo
+          img(src=prefix+"images/cic_logo_large.png", alt="")
+        ul.navigation
+          li
+            a(href="#") {{{Repeat as much as you need!}}}
+        .page-number
+    #impress
+      #first-page.step.slide()
+        .container
+          .row
+            h1.outlined-text.col-12 {{{Title}}}
+            h2.outlined-text.col-12 {{{Subtitle}}}
+            h3.outlined-text.col-10.off-2.pad-3 Hamid Azimy
+            h4.outlined-text.col-10.off-2.pad-1 hamid.azimy@gmail.com
+            h5.outlined-text.col-10.off-2.pad-1 Canadian Inistitute for Cybersecurity
+      .step.slide
+        .container
+          .row
+            .col-12.title Outline
+          .row
+            .col-12
+              ul.list
+      .step.slide.sec1
+        .container
+          .row
+            .col-12.title
+          .row
+            .col-12
+      //- - for (var i = 0; i < 10; i++) {
+      //- .step.slide.sec1
+      //-   .container
+      //-     .row
+      //-       .col-12.title
+      //-     .row
+      //-       .col-12
+      //- - }
+      .step.slide
+        .container
+          .row
+            .col-12.title.ty Thank you! #[br] Any questions?
+      #overview.step(data-scale="5")
+    script(src=prefix+"js/impress.js")
+    script(src=prefix+"js/impressConsole.js")
