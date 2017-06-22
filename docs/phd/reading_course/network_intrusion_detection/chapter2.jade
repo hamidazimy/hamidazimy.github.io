@@ -1,0 +1,187 @@
+// output: chapter2.html
+doctype html
+html(lang="en")
+  head
+    title="Network Intrusion Detection Book - Chapter 2"
+    include ../$hared/head
+
+  body.impress-not-supported
+    .fallback-message
+      p
+        | Your browser 
+        b doesn't support the features required
+        |  by impress.js, so you are presented with a simplified version of this presentation.
+      p
+        | For the best experience please use the latest 
+        b Chrome
+        |  or 
+        b Firefox
+        |  browser.
+    .add-to-every-page
+      .sidebar
+        .logo
+          img(src=prefix+"images/cic_logo_large.png", alt="")
+        ul.navigation            
+          li
+            a(href="#") TCPdump
+          li
+            a(href="#") Introduction to TCP
+          li
+            a(href="#") TCP Gone Awry
+        .page-number
+    #impress
+      #first-page.step.slide()
+        .container
+          .row
+            h1.outlined.col-12 Network Intrusion Detection
+            h2.outlined.col-12 Chapter 2: Introduction to TCPdump and TCP
+            h3.outlined.col-10.off-2.pad-3 Hamid Azimy
+            h4.outlined.col-10.off-2.pad-1 hamid.azimy@gmail.com
+            h5.outlined.col-10.off-2.pad-1 Canadian Inistitute for Cybersecurity
+      .step.slide
+        .container
+          .row
+            .col-12.title Outline
+          .row
+            .col-12
+              ul.list
+                li TCPdump
+                li Introduction to TCP
+                li TCP Gone Awry
+      .step.slide.sec1
+        .container
+          .row
+            .col-12.title What is TCPdump
+          .row
+            .col-12
+              ul.list
+                li It's a tool used to:
+                  ul.list.compact
+                    li gather data from the network
+                    li decipher the bits
+                    li display the output 
+                li Runs close to the metal!
+      .step.slide.sec1
+        .container
+          .row
+            .col-12.title TCPdump Behavior
+          .row
+            .col-12
+              ul.list
+                li By default, this reads all the traffic from the default network interface and spews all the output to the console.
+                li Though, many different command-line options are available to alter the default behavior.
+      .step.slide.sec1
+        .container
+          .row
+            .col-12.title TCPdump Behavior
+          .row
+            .col-12
+              .navy.i Filters
+              ul.list
+                li When you don't want to collect all the traffic.
+                li example: 'tcp'
+                li you can save frequently used filter to a file #[br] and use it by #[code.inline -F &lt;filename&gt;] option.
+      .step.slide.sec1
+        .container
+          .row
+            .col-12.title TCPdump Behavior
+          .row
+            .col-12
+              .navy.i Binary Collection
+              ul.list
+                li You can collect raw output in binary format for later use
+                li Save the data by command #[code.inline tcpdump -w &lt;filename&gt;]
+                li Load the data by command #[code.inline tcpdump -r &lt;filename&gt;]
+      .step.slide.sec1
+        .container
+          .row
+            .col-12.title TCPdump Behavior
+          .row
+            .col-12
+              .navy.i Altering the Amount of Data Collected
+              ul.list.small
+                li TCPdump does not attempt to collect the entire datagram sent.
+                li.clear One of the most common lengths of collected data is 68 bytes.
+                  .col-9.off-1.pad-2
+                    img.fill(src="images/sample_packet.jpg", alt="")
+                li You can alter the default snaplen by #[code.inline tcpdump –s &lt;length&gt;]
+      .step.slide.sec1
+        .container
+          .row
+            .col-12.title TCPdump Output
+          .row
+            .col-12
+              code.block.xxsmall.center
+                | 09:32:43:910000 nmap.edu.1173 &gt; dns.net.21: S 62697789:62697789(0) win 512
+              ul.list.compact.xsmall
+                li Timestamp
+                li Source Host Name
+                li Source Port Number
+                li Flow Sign
+                li Destination Host Name
+                li Destination Port Number
+                li TCP Flag
+                li Beginning:Ending TCP Sequence Number
+                li Receiving Buffer Size
+      .step.slide.sec1
+        .container
+          .row
+            .col-12.title TCPdump Output
+          .row
+            .col-12
+              .navy.i Absolute and Relative Sequence Numbers
+              ul.list.small
+                li TCPdump changes from the absolute ISNs to relative sequence numbers after the two hosts exchange their ISNs.
+              .navy.i Dumping in Hexadecimal
+              ul.list.small.compact
+                li TCPdump does not display all the fields of the captured data.
+                li So, if you want to see the entire datagram captured...
+                li you can use #[code.inline -x] option to see antire datagram in hexadecial.
+      .step.slide.sec2
+        .container
+          .row
+            .col-12.title Introduction to TCP
+          .row
+            .col-12
+              | TCP is a reliable connection-oriented protocol that ensure reliability using the following mechanisms:
+              ul.list
+                li.anim.fade-in Exclusive TCP connection
+                  ul.list.compact.anim.hide
+                    li.small The connection is exclusive and unique between the two hosts
+                li.anim.fade-in TCP sequence number
+                  ul.list.compact.anim.hide
+                    li.small These provide a sense of chronology to the TCP data sent and received.
+                li.anim.fade-in Acknoledgements
+                  ul.list.compact.anim.hide
+                    li.small Acknowledgements are used to inform the sender that data has been received.
+      .step.slide.sec2
+        .container
+          .row
+            .col-12.title 
+          .row
+            .col-12
+              ul.list
+                li
+      .step.slide.sec2
+        .container
+          .row
+            .col-12.title 
+          .row
+            .col-12
+              ul.list
+                li
+      .step.slide.sec2
+        .container
+          .row
+            .col-12.title 
+          .row
+            .col-12
+              ul.list
+                li
+      .step.slide
+        .container
+          .row
+            .col-12.title.ty Thank you! #[br] Any questions?
+      #overview.step(data-scale="5")
+    script(src=prefix+"js/impress.js")
+    script(src=prefix+"js/impressConsole.js")

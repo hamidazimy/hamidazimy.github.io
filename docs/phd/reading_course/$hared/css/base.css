@@ -287,6 +287,12 @@ a:focus {
     clear: both;
 }
 
+.clear:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
 [class^='col-'] {
     float: left;
     position: relative;
@@ -485,6 +491,30 @@ ol.list {
 }
 .xxxsmall {
     font-size: 50%;
+}
+
+pre, code {
+  font-family: InconsolataGo, Inconsolata, Consolas, Monaco, monospace;
+}
+
+code.inline {
+    display: inline;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #333;
+    border-radius: 0.25rem;
+    color: rgb(105, 4, 46);
+    background-color: #EEE;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+code.block {
+    display: block;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #333;
+    border-radius: 0.25rem;
+    color: rgb(105, 4, 46);
+    background-color: #EEE;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .center {

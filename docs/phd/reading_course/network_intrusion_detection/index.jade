@@ -1,0 +1,46 @@
+// output: index.html
+doctype html
+html(lang="en")
+  head
+    title="Network Intrusion Detection Book"
+    style.
+      html, body {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 5%;
+        min-height: 200px;
+      }
+      .book-cover {
+        height: 100%;
+        display: block;
+        float: left;
+        border: 1px solid #777;
+        border-radius: 0.5rem;
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+      }
+      .chapters {
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 3rem 0 0 5rem;
+        list-style: none;
+      }
+      .chapters li {
+        margin-bottom: 1rem;
+      }
+      .chapters li a {
+        font-size: 1.8rem;
+        color: hsl(195, 50%, 26%);
+        text-decoration: none;
+        border-bottom: 2px dotted hsla(195, 50%, 26%, 0.5);
+      }
+  body
+    img.book-cover(src="images/nid.jpg")
+    ul.chapters
+      li
+        a(href="chapter1.html") Chapter 1: #[i IP Concepts]
+      li
+        a(href="chapter2.html") Chapter 2: #[i Introduction to TCPdump and TCP]

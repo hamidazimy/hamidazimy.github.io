@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Network Intrusion Detection Book - Chapter 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../$hared/images/cic_logo_small.png">
+    <!-- Styles-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif">
+    <link rel="stylesheet" href="../$hared/css/base.css">
+    <link rel="stylesheet" href="../$hared/css/main.css">
+    <link rel="stylesheet" href="../$hared/css/animations.css">
+    <!-- Scripts-->
+    <script src="../$hared/js/jquery.js"></script>
+    <script src="../$hared/js/main.js"></script>
+  </head>
+  <body class="impress-not-supported">
+    <div class="fallback-message">
+      <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+      <p>For the best experience please use the latest <b>Chrome</b> or <b>Firefox</b> browser.</p>
+    </div>
+    <div class="add-to-every-page">
+      <div class="sidebar">
+        <div class="logo"><img src="../$hared/images/cic_logo_large.png" alt=""></div>
+        <ul class="navigation">           
+          <li><a href="#">TCPdump</a></li>
+          <li><a href="#">Introduction to TCP</a></li>
+          <li><a href="#">TCP Gone Awry</a></li>
+        </ul>
+        <div class="page-number"></div>
+      </div>
+    </div>
+    <div id="impress">
+      <div id="first-page" class="step slide">
+        <div class="container">
+          <div class="row">
+            <h1 class="outlined col-12">Network Intrusion Detection</h1>
+            <h2 class="outlined col-12">Chapter 2: Introduction to TCPdump and TCP</h2>
+            <h3 class="outlined col-10 off-2 pad-3">Hamid Azimy</h3>
+            <h4 class="outlined col-10 off-2 pad-1">hamid.azimy@gmail.com</h4>
+            <h5 class="outlined col-10 off-2 pad-1">Canadian Inistitute for Cybersecurity</h5>
+          </div>
+        </div>
+      </div>
+      <div class="step slide">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title">Outline</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <ul class="list">
+                <li>TCPdump</li>
+                <li>Introduction to TCP</li>
+                <li>TCP Gone Awry</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step slide sec1">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title">What is TCPdump</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <ul class="list">
+                <li>It's a tool used to:
+                  <ul class="list compact">
+                    <li>gather data from the network</li>
+                    <li>decipher the bits</li>
+                    <li>display the output </li>
+                  </ul>
+                </li>
+                <li>Runs close to the metal!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step slide sec1">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title">TCPdump Behavior</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <ul class="list">
+                <li>By default, this reads all the traffic from the default network interface and spews all the output to the console.</li>
+                <li>Though, many different command-line options are available to alter the default behavior.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step slide sec1">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title">TCPdump Behavior</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="navy i">Filters</div>
+              <ul class="list">
+                <li>When you don't want to collect all the traffic.</li>
+                <li>example: 'tcp'</li>
+                <li>you can save frequently used filter to a file <br> and use it by <code class="inline">-F &lt;filename&gt;</code> option.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step slide sec1">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title">TCPdump Behavior</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="navy i">Binary Collection</div>
+              <ul class="list">
+                <li>You can collect raw output in binary format for later use</li>
+                <li>Save the data by command <code class="inline">tcpdump -w &lt;filename&gt;</code></li>
+                <li>Load the data by command <code class="inline">tcpdump -r &lt;filename&gt;</code></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step slide sec1">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title">TCPdump Behavior</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="navy i">Altering the Amount of Data Collected</div>
+              <ul class="list small">
+                <li>TCPdump does not attempt to collect the entire datagram sent.</li>
+                <li class="clear">One of the most common lengths of collected data is 68 bytes.
+                  <div class="col-9 off-1 pad-2"><img src="images/sample_packet.jpg" alt="" class="fill"></div>
+                </li>
+                <li>You can alter the default snaplen by <code class="inline">tcpdump –s &lt;length&gt;</code></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step slide sec1">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title">TCPdump Output</div>
+          </div>
+          <div class="row">
+            <div class="col-12"><code class="block xxsmall center">09:32:43:910000 nmap.edu.1173 &gt; dns.net.21: S 62697789:62697789(0) win 512</code>
+              <ul class="list compact xsmall">
+                <li>Timestamp</li>
+                <li>Source Host Name</li>
+                <li>Source Port Number</li>
+                <li>Flow Sign</li>
+                <li>Destination Host Name</li>
+                <li>Destination Port Number</li>
+                <li>TCP Flag</li>
+                <li>Beginning:Ending TCP Sequence Number</li>
+                <li>Receiving Buffer Size</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step slide sec1">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title">TCPdump Output</div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="navy i">Absolute and Relative Sequence Numbers</div>
+              <ul class="list small">
+                <li>TCPdump changes from the absolute ISNs to relative sequence numbers after the two hosts exchange their ISNs.</li>
+              </ul>
+              <div class="navy i">Dumping in Hexadecimal</div>
+              <ul class="list small compact">
+                <li>TCPdump does not display all the fields of the captured data.</li>
+                <li>So, if you want to see the entire datagram captured...</li>
+                <li>you can use <code class="inline">-x</code> option to see antire datagram in hexadecial.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step slide sec2">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title">Introduction to TCP</div>
+          </div>
+          <div class="row">
+            <div class="col-12">TCP is a reliable connection-oriented protocol that ensure reliability using the following mechanisms:
+              <ul class="list">
+                <li class="anim fade-in">Exclusive TCP connection
+                  <ul class="list compact anim hide">
+                    <li class="small">The connection is exclusive and unique between the two hosts</li>
+                  </ul>
+                </li>
+                <li class="anim fade-in">TCP sequence number
+                  <ul class="list compact anim hide">
+                    <li class="small">These provide a sense of chronology to the TCP data sent and received.</li>
+                  </ul>
+                </li>
+                <li class="anim fade-in">Acknoledgements
+                  <ul class="list compact anim hide">
+                    <li class="small">Acknowledgements are used to inform the sender that data has been received.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step slide sec2">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"> </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <ul class="list">
+                <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step slide sec2">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"> </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <ul class="list">
+                <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step slide sec2">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title"> </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <ul class="list">
+                <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step slide">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 title ty">Thank you! <br> Any questions?</div>
+          </div>
+        </div>
+      </div>
+      <div id="overview" data-scale="5" class="step"></div>
+    </div>
+    <script src="../$hared/js/impress.js"></script>
+    <script src="../$hared/js/impressConsole.js"></script>
+  </body>
+</html>
