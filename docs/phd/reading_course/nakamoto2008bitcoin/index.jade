@@ -1,0 +1,215 @@
+// output: index.html
+doctype html
+html(lang="en")
+  head
+    title="Bitcoin:&nbsp;A&nbsp;peer-to-peer&nbsp;electronic&nbsp;cash&nbsp;system&nbsp;-&nbsp;"
+    include ../$hared/head
+    link(rel="stylesheet", href=prefix+"css/cic.css")
+    script.
+      setInterval(function() {
+        var title = document.getElementsByTagName("title")[0].innerText;
+        document.getElementsByTagName("title")[0].innerHTML = title.slice(1) + title.slice(0, 1);
+      }, 250);
+
+  body.impress-not-supported
+    .fallback-message
+      p
+        | Your browser 
+        b doesn't support the features required
+        |  by impress.js, so you are presented with a simplified version of this presentation.
+      p
+        | For the best experience please use the latest 
+        b Chrome
+        |  or 
+        b Firefox
+        |  browser.
+    .add-to-every-page
+      .cic
+        .top_bar
+          .logo
+            img(src=prefix+"images/cic_logo.svg", alt="")
+        .footer
+          .page-number
+    #impress
+      #first-page.step.slide
+        .top.unb-logo
+        .container
+          .row
+            h1.col-12 Bitcoin: A peer-to-peer electronic cash system
+            h2.col-12 Satoshi Nakamoto, 2008
+            h6.xxxsmall A little bit of eye-candy every now and then doesn't hurt, right?!
+        .end
+      .step.slide
+        .container
+          .row
+            .col-12.title What is Bitcoin?
+          .row
+            .col-12
+              ul.list
+                li Cryptocurrency &amp; Digital Payment System
+                li Invented by Satoshi Nakamoto
+                li Introduced in 2008 and began to work in 2009
+      .step.slide
+        .container
+          .row
+            .col-12.title What is Bitcoin, technically?
+          .row
+            .col-12
+              ul.list
+                li A public ledger that keep transactions
+                li Uses a special type of data structure called #[span.i.b Blockchain]
+                li Is controlled in a decentralized manner, means every node (or computer) in the (Bitcoin) network, have a copy of the ledger for its own
+                li Does not need a trusted third-party to control validity of treansactions 
+                li.i.b.anim.fade-in(style="color: #AA4444") But what about trust?
+      .step.slide
+        .container
+          .row
+            .col-12.title Trust in Bitcoin?
+          .row
+            .col-12
+              ul.list
+                li Actually, trust is not an issue here!
+                li Integrity of the whole system is guaranteed by design
+                li A well-designed data structure alongside with special mathematical functions and cryptography techniques protect every aspect of the system.
+                li.i "The system is secure as long as honest nodes collectively control more CPU power than any cooperating group of attacker nodes."
+      .step.slide
+        .container
+          .row
+            .col-12.title Review 1: Asymmetrical Cryptography
+          .row
+            .col-12
+              ul.list
+                li Uses two keys (typically called public key &amp; and private key)
+                li Any message/data encrypted with one of those, could only be decrypted using the other.
+                li Usages:
+                  ul.list.compact
+                    li Public-key Encryption
+                    li Digital Signature
+      .step.slide
+        .container
+          .row
+            .col-12.title Review 2: Hashing
+          .row
+            .col-12
+              ul.list
+                li Hash function is a one-way encryption method.
+                  ul.list.compact
+                    li Input: A message or a piece of data
+                    li Output: A fixed-length array of bits (usually showed in hex format)
+                li Any tiny change in input results a completely different unguessable output.
+                li Usages:
+                  ul.list.compact
+                    li File (or dara) verification
+                    li Pawwrod verification
+                    li Proof of work
+                    li ...
+      .step.slide
+        .container
+          .row
+            .col-12.title How Bitcoin works? "Transactions"
+          .row
+            .col-6
+              ul.list
+                li A coin: A chain of digital signatures
+                li Each owner transfers the coin to the next by digitally signing a hash of the previous transaction and the public key of the next owner and adding these to the end of the coin. A payee can verify the signatures to verify the chain of ownership.
+            .col-6.pad-3
+              img.fill(src="images/transactions.svg", alt="")
+      .step.slide
+        .container
+          .row
+            .col-12.title The Problem of Double-spending
+          .row
+            .col-12
+              ul.list
+                li We need a way for the payee to know that the previous owners did not sign any earlier transactions.
+                  ul.list.compact
+                    li The earliest transaction is the one that counts
+                    li The only way to confirm is to be aware of all transactions
+                    li So, transactions must be publicly announced
+                    li We need a system for participants to agree on a single history of the order in which they were received
+      .step.slide
+        .container
+          .row
+            .col-12.title How Bitcoin works? "Timestamp Server"
+          .row
+            .col-12
+              ul.list.compact
+                li A timestamp server works by taking a hash of a block of items
+                li The timestamp proves that the data must have existed at the time, obviously, in order to get into the hash
+                li Each timestamp includes the previous timestamp in its hash, forming a chain
+            .col-10.off-1
+              img.fill(src="images/timestamp-server.svg", alt="")
+      .step.slide
+        .container
+          .row
+            .col-12.title How Bitcoin works? "Proof-of-Work"
+          .row
+            .col-12
+              ul.list
+                li Scanning for a value that when hashed, such as with SHA-256, the hash begins with a number of zero bits
+            .col-10.off-1
+              img.fill(src="images/proof-of-work.svg", alt="")
+      .step.slide
+        .container
+          .row
+            .col-12.title How Bitcoin works? "Network"
+          .row
+            .col-12
+              ul.list
+                li Steps:
+                  ol.list.compact
+                    li.anim.fade-in New transactions are broadcast to all nodes.
+                    li.anim.fade-in Each node collects new transactions into a block.
+                    li.anim.fade-in Each node works on finding a difficult proof-of-work for its block.
+                    li.anim.fade-in When a node finds a proof-of-work, it broadcasts the block to all nodes.
+                    li.anim.fade-in Nodes accept the block only if all transactions in it are valid and not already spent.
+                    li.anim.fade-in Nodes express their acceptance of the block by working on creating the next block in the chain, using the hash of the accepted block as the previous hash.
+      .step.slide
+        .container
+          .row
+            .col-12.title 
+          .row
+            .col-12
+              ul.list
+                li 
+      .step.slide
+        .container
+          .row
+            .col-12.title 
+          .row
+            .col-12
+              ul.list
+                li 
+      .step.slide
+        .container
+          .row
+            .col-12.title 
+          .row
+            .col-12
+              ul.list
+                li 
+      .step.slide
+        .container
+          .row
+            .col-12.title 
+          .row
+            .col-12
+              ul.list
+                li 
+      .step.slide
+        .container
+          .row
+            .col-12.title 
+          .row
+            .col-12
+              ul.list
+                li 
+      .step.slide.ty
+        .top
+        .container
+          .row
+            .col-12.title.ty-text Thank you! #[br] Any questions?
+        .end.unb-logo
+      #overview.step(data-scale="5")
+    script(src=prefix+"js/impress.js")
+    script(src=prefix+"js/impressConsole.js")

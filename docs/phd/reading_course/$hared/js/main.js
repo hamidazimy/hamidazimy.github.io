@@ -33,8 +33,8 @@ function insertSidebar() {
   var total_pages = "" + ($(".step").length - 1);
   $(".step").each(function(){
     if (++page_number !== 1) {
-      $(this).addClass("have-sidebar").append($(".add-to-every-page").html());
-      $(this).find(".page-number").append("<div class='page-number-container'>" + page_number + " / " + total_pages +"</div>");
+      $(this).addClass("have-common").append($(".add-to-every-page").html());
+      $(this).find(".page-number").append("<div class='page-number-container'>" + page_number + "</div>");
     }
   });
 }

@@ -1,0 +1,163 @@
+#first-page .top, .ty .end {
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    height: 24px;
+    border-radius: 4px;
+    background-color: #f79323;
+}
+
+#first-page .top::after, .ty .end::after {
+    content: '';
+    display: block;
+    position: absolute;
+    min-width: 200px;
+    min-height: 200px;
+    right: 12px;
+    background-image: url("../images/unb.svg");
+    background-size: 200px 200px;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+#first-page .top::after {
+    top: 24px;
+}
+
+.ty .end::after {
+    top: -200px;
+}
+
+#first-page .end, .ty .top {
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    height: 128px;
+    border-radius: 4px;
+    background-color: #f79323;
+    background-image: url("../images/cic_white.svg");
+    background-size: 128px 128px;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+#first-page .end::before, .ty .top::before {
+    content: 'Canadian Institute for Cybersecurity (CIC)';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scaleY(1.5);
+    color: white;
+    font-family: "Overpass";
+}
+
+#first-page h1 {
+    padding-top: 16rem;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+#first-page h2 {
+    text-align: center;
+    padding: 1rem 0 5rem;
+}
+
+.top {
+    top: 4px;
+}
+
+.end {
+    bottom: 4px;
+}
+
+.ty .cic {
+    display: none;
+}
+
+.ty-text {
+    margin-top: 15rem !important;
+}
+
+.add-to-every-page {
+    display: none;
+}
+
+.cic {
+    font-family: "Overpass";
+}
+
+.top_bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 128px;
+}
+
+.top_bar .logo {
+    display: block;
+    float: right;
+    padding: 4px;
+    width: 128px;
+    height: 128px;
+}
+
+.top_bar .logo img {
+    width: 100%;
+}
+
+.top_bar::after {
+    content: 'CIC';
+    display: block;
+    clear: both;
+    height: 36px;
+    margin: -8px 4px 0;
+    padding-right: 36px;
+    color: white;
+    text-align: right;
+    background-color: #f79323;
+    border-radius: 4px;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 36px;
+    margin: -8px 4px 4px;
+    padding-top: -10px;
+    padding-left: 16px;
+    color: white;
+    background-color: #f79323;
+    border-radius: 4px;
+    vertical-align: super;
+}
+
+.footer::before {
+    font-size: 20px;
+    content: 'Copyright © 2017 Canadian Institute for Cybersecurity';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.footer .page-number {
+    float: right;
+    padding-top: 4px;
+    padding-right: 36px;
+    font-size: 0.8em;
+    width: 3em;
+}
+/**/
+.title {
+    font-size: 3.0rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.list .list {
+    margin-top: 1rem;
+}

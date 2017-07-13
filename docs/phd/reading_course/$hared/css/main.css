@@ -32,7 +32,8 @@
 .add-to-every-page {
     display: none;
 }
-.have-sidebar {
+/**/
+.have-common {
     padding-left: 330px;
 }
 .sidebar {
@@ -107,7 +108,77 @@
     width: 100%;
     font-size: 1.4rem;
 }
+/**/
+.cic {
+    font-family: "Overpass";
+}
 
+.top_bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 128px;
+}
+
+.top_bar .logo {
+    display: block;
+    float: right;
+    padding: 4px;
+    width: 128px;
+    height: 128px;
+}
+
+.top_bar .logo img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.top_bar::after {
+    content: 'CIC';
+    display: block;
+    clear: both;
+    height: 36px;
+    margin: -8px 4px 0;
+    padding-right: 36px;
+    color: white;
+    text-align: right;
+    background-color: #f79323;
+    border-radius: 4px;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 36px;
+    margin: -8px 4px 4px;
+    padding-top: -10px;
+    padding-left: 16px;
+    color: white;
+    background-color: #f79323;
+    border-radius: 4px;
+    vertical-align: super;
+}
+
+.footer::before {
+    font-size: 20px;
+    content: 'Copyright © 2017 Canadian Institute for Cybersecurity';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.footer .page-number {
+    position: static;
+    float: right;
+    padding-top: 4px;
+    padding-right: 36px;
+    font-size: 0.8em;
+    width: 3em;
+}
+/**/
 .title {
     font-size: 3.0rem;
     font-weight: 800;
