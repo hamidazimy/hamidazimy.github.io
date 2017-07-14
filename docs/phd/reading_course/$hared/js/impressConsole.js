@@ -47,10 +47,10 @@
         '</html>';
 
     // Default css location
-    var cssFile = "../../$hared/css/impressConsole.css";
+    var cssFile = "../$hared/css/impressConsole.css";
 
     // css for styling iframs on the console
-    var cssFileIframe = "../../$hared/css/iframe.css";
+    var cssFileIframe = "../$hared/css/iframe.css";
 
     // All console windows, so that you can call impressConsole() repeatedly.
     var allConsoles = {};
