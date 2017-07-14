@@ -44,9 +44,13 @@
 #first-page .end::before, .ty .top::before {
     content: 'Canadian Institute for Cybersecurity (CIC)';
     position: absolute;
+    top: 45px;
+    left: 400px;
+    /**
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%) scaleY(1.5);
+    /**/
     color: white;
     font-family: "Overpass";
 }
@@ -139,8 +143,11 @@
     font-size: 20px;
     content: 'Copyright © 2017 Canadian Institute for Cybersecurity';
     position: absolute;
+    top: 6px;
+    /**
     top: 50%;
     transform: translateY(-50%);
+    /**/
 }
 
 .footer .page-number {
@@ -149,6 +156,25 @@
     padding-right: 36px;
     font-size: 0.8em;
     width: 3em;
+}
+
+.active .page-number-large {
+    z-index: -1000;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.page-number-large {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 640px;
+    text-align: center;
+    background-color: hsla(0, 0%, 100%, 0.5);
+    opacity: 0.3;
+    transition: opacity 4s;
 }
 /**/
 .title {

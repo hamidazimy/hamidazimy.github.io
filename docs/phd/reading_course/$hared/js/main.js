@@ -9,6 +9,24 @@ $(document).ready(function() {
 
 function arrangeSlides() {
   var n = $(".slide").length;
+
+  var a = 4;
+  var b = 4;
+
+  var i = (1 - a) / 2;
+  var j = (1 - b) / 2;
+
+  $(".slide").each(function() {
+    $(this).get()[0].setAttribute("data-y",  900 * i);
+    $(this).get()[0].setAttribute("data-x", 1500 * j);
+    j++;
+    if (j > (b - 1) / 2) {
+      i++;
+      j = (1 - b) / 2;
+    }
+  });
+
+  return;
   var r = 144 * n + (n < 8) * (8 - n) * 72;
   var i = 0;
   $(".slide").each(function() {
@@ -35,6 +53,7 @@ function insertSidebar() {
     if (++page_number !== 1) {
       $(this).addClass("have-common").append($(".add-to-every-page").html());
       $(this).find(".page-number").append("<div class='page-number-container'>" + page_number + "</div>");
+      $(this).find(".page-number-large").html(page_number);
     }
   });
 }

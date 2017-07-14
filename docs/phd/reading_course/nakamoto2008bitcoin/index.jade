@@ -30,6 +30,7 @@ html(lang="en")
             img(src=prefix+"images/cic_logo.svg", alt="")
         .footer
           .page-number
+      .page-number-large
     #impress
       #first-page.step.slide
         .top.unb-logo
@@ -158,12 +159,12 @@ html(lang="en")
               ul.list
                 li Steps:
                   ol.list.compact
-                    li.anim.fade-in New transactions are broadcast to all nodes.
-                    li.anim.fade-in Each node collects new transactions into a block.
-                    li.anim.fade-in Each node works on finding a difficult proof-of-work for its block.
-                    li.anim.fade-in When a node finds a proof-of-work, it broadcasts the block to all nodes.
-                    li.anim.fade-in Nodes accept the block only if all transactions in it are valid and not already spent.
-                    li.anim.fade-in Nodes express their acceptance of the block by working on creating the next block in the chain, using the hash of the accepted block as the previous hash.
+                    li New transactions are broadcast to all nodes.
+                    li Each node collects new transactions into a block.
+                    li Each node works on finding a difficult proof-of-work for its block.
+                    li When a node finds a proof-of-work, it broadcasts the block to all nodes.
+                    li Nodes accept the block only if all transactions in it are valid and not already spent.
+                    li Nodes express their acceptance of the block by working on creating the next block in the chain, using the hash of the accepted block as the previous hash.
       .step.slide
         .container
           .row
