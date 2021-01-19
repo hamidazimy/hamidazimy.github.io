@@ -5,7 +5,7 @@ $(document).ready(function() {
 		$('#send_mail').prop('disabled', true);
 
 		$.post('https://postmail.invotes.com/send', {
-			"access_token": "ea8yqywkunupp4tdb4foqv2p",
+			"access_token": "t9jul6wdiooisjfu18a91lo8",
 			"subject": 'Mail from "' + $('#name' ).val() + '" via github page.',
 			"text": 'From: "' + $('#name' ).val() + '" <' + $('#email').val() + '>\n\n\n' + $('#message').val()
 		}).done(function(response) {
